@@ -1,11 +1,12 @@
-<template>
+<template class="CenturyGothic">
   <router-view />
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
+import styles from "./css/app.scss";
 
 export default defineComponent({
-  name: 'App'
-})
+  name: "App",
+});
 </script>
