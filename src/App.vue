@@ -1,24 +1,11 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-page-container>
-      <HelloWorld />
-    </q-page-container>
-  </q-layout>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
 
-export default {
-  name: 'LayoutDefault',
-
-  components: {
-    HelloWorld
-  },
-
-  setup () {
-    return {
-    }
-  }
-}
+export default defineComponent({
+  name: 'App'
+})
 </script>
