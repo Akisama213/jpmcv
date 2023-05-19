@@ -9,9 +9,9 @@ import { useQuasar } from "quasar";
 export default defineComponent({
   name: "App",
 
-  /*setup() {
+  setup() {
     const $q = useQuasar();
     $q.addressbarColor.set("#a2e3fa");
-  },*/
+  },
 });
 </script>
