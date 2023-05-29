@@ -11,7 +11,7 @@ export default defineComponent({
 
   setup() {
     const $q = useQuasar();
-    $q.addressbarColor.set("#a2e3fa");
+    //$q.addressbarColor.set("#a2e3fa");
   },
 });
 </script>

@@ -1,70 +1,44 @@
 <template>
-  <q-page
-    class="flex flex-top CenturyGothic bg-primary"
-    style="overflow-x: hidden"
-  >
-    <body style="position: relative; left: 10px">
-      <!--This section is used to animate my name-->
-      <div @mouseover="extend()" @mouseleave="shorten()">
-        <div :hidden="extended">
-          <h1 class="text-accent">Jason Piedra Matamoros</h1>
-        </div>
-        <div :hidden="shortened">
-          <h1 class="text-accent">JasonPM</h1>
-        </div>
-        <!--q-btn
-        color="secondary"
-        text-color="primary"
-        @click="name_toggle()"
-        :loading="loading"
-      >
-        <b>Change</b>
-      </q-btn--->
-      </div>
-      <!---->
-    </body>
+  <q-page class="CenturyGothic" style="overflow-x: hidden">
+    <!--This section is used to animate my name-->
+    <div @mouseover="extend = true" @mouseleave="extend = false">
+      <h1 class="text-accent">
+        Jason<NameAnim label="Piedra" :extend="extend" />
+        <NameAnim label="Matamoros" :extend="extend" />
+      </h1>
+    </div>
+    <!---->
+    <div>
+      <text v-for="n in 300" :key="n">Hello, this is "nothing" text. </text>
+    </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
+import NameAnim from "../components/NameAnim.vue";
+export default {
   name: "IndexPage",
   data() {
     return {
-      extended: true,
-      shortened: false,
+      extend: false,
     };
   },
-
   methods: {
-    /* Learnt a lot from this
-    name_toggle() {
-      //Changing between extended and shortened versions of my name
-      if (this.hover) {
-        this.shortened = true;
-        this.extended = false;
-      } else {
-        this.shortened = false;
-        this.extended = true;
-      }*/
-    extend() {
-      if (this.extended) {
-        this.shortened = true;
-        this.extended = false;
-      }
-    },
-    shorten() {
-      if (this.shortened) {
-        this.shortened = false;
-        this.extended = true;
-      }
-      /*
-      this.shortened = false;
-      this.extended = true;
-    */
+    getExtend() {
+      return this.extend;
     },
   },
-});
+  watch: {},
+  mounted() {
+    /*setInterval(OnTick, 10);
+
+    function OnTick() {
+      extend = this.getExtend();
+      console.log("Is extend true?", this.extend);
+    };*/
+  },
+  components: {
+    NameAnim,
+  },
+};
 </script>
