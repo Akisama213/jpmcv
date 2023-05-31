@@ -3,8 +3,10 @@
     <!--This section is used to animate my name-->
     <div @mouseover="extend = true" @mouseleave="extend = false">
       <h1 class="text-accent">
-        Jason<NameAnim label="Piedra" :extend="extend" />
-        <NameAnim label="Matamoros" :extend="extend" />
+        Jason<NameAnim label="Piedra" :extend="extend" /><NameAnim
+          label="Matamoros"
+          :extend="extend"
+        />
       </h1>
     </div>
     <!---->

@@ -9,35 +9,37 @@
 </template>
 
 <style>
-span.minus {
+template {
+  width: fit-content;
+}
+span {
   opacity: 0;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-5%);
+}
+.minus {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  transform: translateX(-50px);
   display: inline-block;
   width: 0%;
 }
-span.mayus {
-  transition: all 1s ease-in-out;
-  width: auto;
+.mayus {
+  width: initial;
   opacity: 1;
 }
-span.mayus.space {
-  transition: all 1s ease-in-out;
+.space {
 }
-span.mayus.space::before {
+.space::before {
   content: " ";
 }
-span.minus.fade {
-  transition: all 0.6s ease-in-out;
-  width: fit-content;
+.fade {
+  transition: all 0.3s ease-out;
+  width: initial;
   opacity: 1;
-  transform: translateX(5%);
+  transform: translateX(0);
 }
 </style>
 
 <script>
-import { thisExpression } from "@babel/types";
-
 export default {
   name: "NameAnim",
   props: {
@@ -47,55 +49,48 @@ export default {
   data() {
     return {
       SplitLabel: this.label.split(""),
-      active: true,
+      wait: Date.now(),
     };
   },
   watch: {
     extend(val) {
+      console.log("Pre extend", val);
       if (val) {
-        console.log("In timer", this.timer);
-        while (this.timer != null) {
-          //console.log("Extending");
-          this.timer = this.animateExtension();
-          console.log("timer", this.timer);
-        }
-        console.log("Out timer", this.timer);
-        this.timer = true;
+        setTimeout(this.animateExtension, this.wait - Date.now());
       } else {
-        console.log("In timer", this.timer);
-        while (this.timer != null) {
-          //console.log("Extending");
-          this.timer = this.animateShortening();
-          console.log("timer", this.timer);
-        }
-        console.log("Out timer", this.timer);
-        this.timer = true;
+        this.wait = Date.now() + 200;
+        setTimeout(() => {
+          if (!this.extend) {
+            console.log(this.extend);
+            this.animateShortening();
+          } else {
+            this.wait = Date.now() + 500;
+          }
+        }, this.wait - Date.now());
       }
     },
   },
   methods: {
     animateExtension() {
-      let timer = setInterval(onTick, 30);
+      let timer = setInterval(onTick, 180 / this.label.length);
       let n = this.label.length - 1;
       let label = this.label;
       const space = document.getElementById(label + "." + 0);
       space.classList.add("space");
-      console.log(space);
       function onTick() {
         if (n > 0) {
           const span = document.getElementById(label + "." + n);
           span.classList.add("fade");
-          //console.log(span);
           n--;
+          //console.log(span);
         } else {
           clearInterval(timer);
           timer = null;
         }
       }
-      return null;
     },
     animateShortening() {
-      let timer = setInterval(onTick, 30);
+      let timer = setInterval(onTick, 300 / this.label.length);
       let n = 0;
       let label = this.label;
       const space = document.getElementById(label + "." + 0);
@@ -104,14 +99,13 @@ export default {
         if (n < label.length) {
           const span = document.getElementById(label + "." + n);
           span.classList.remove("fade");
-          //console.log(span);
           n++;
         } else {
           clearInterval(timer);
           timer = null;
         }
       }
-      return null;
+      this.wait = Date.now() + 600;
     },
   },
   mounted() {
