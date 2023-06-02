@@ -1,5 +1,5 @@
 <template>
-  <space :id="label + '.space'">-</space>
+  <text class="space" :id="label + '.space'">-</text>
   <span class="visible">
     <span
       v-for="n in SplitLabel.length"
@@ -16,11 +16,11 @@ span {
   opacity: 0;
   display: inline-block;
 }
-space {
+.space {
   width: 0;
   opacity: 0;
   transform: translateX(50px);
-  transition: 0.5s;
+  transition: 0.6s;
   display: inline-block;
 }
 .visible {
@@ -29,7 +29,7 @@ space {
 .spaced {
   width: auto;
   transform: translateX(0px);
-  transition: width 0.5s;
+  transition: width 0.3s;
 }
 .minus {
   width: 0;
