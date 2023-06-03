@@ -1,7 +1,8 @@
 <template>
   <text class="space" :id="label + '.space'">-</text>
-  <span class="visible">
+  <span class="NAword">
     <span
+      class="NAspan"
       v-for="n in SplitLabel.length"
       :id="label + '.' + (n - 1)"
       :key="SplitLabel[n - 1]"
@@ -12,14 +13,17 @@
 </template>
 
 <style>
-span {
+.NAword {
+  width: fit-content;
+  overflow-x: visible;
+}
+.NAspan {
   opacity: 0;
   display: inline-block;
 }
 .space {
   width: 0;
   opacity: 0;
-  transform: translateX(50px);
   transition: 0.6s;
   display: inline-block;
 }
@@ -28,7 +32,6 @@ span {
 }
 .spaced {
   width: auto;
-  transform: translateX(0px);
   transition: width 0.3s;
 }
 .minus {
@@ -45,8 +48,6 @@ span {
 </style>
 
 <script>
-// transition: transform 0.4s ease, opacity 0.15s;
-// transition: transform 0.3s ease, opacity 0.1s;
 export default {
   name: "NameAnim",
   props: {
@@ -101,6 +102,7 @@ export default {
         if (show_n < span.scrollWidth) {
           span.style.width = show_n + "px";
         } else {
+          span.style.width = span.scrollWidth;
           clearInterval(show_timer);
           show_timer = null;
         }
@@ -120,6 +122,7 @@ export default {
             if (show_n < span.scrollWidth) {
               span.style.width = show_n + 1 + "px";
             } else {
+              span.style.width = span.scrollWidth;
               clearInterval(show_timer);
               show_timer = null;
             }
@@ -147,6 +150,7 @@ export default {
         if (hide_n > 0) {
           span.style.width = hide_n - 1 + "px";
         } else {
+          span.style.width = 0;
           clearInterval(hide_timer);
           hide_timer = null;
         }
@@ -167,6 +171,7 @@ export default {
             if (hide_n > 0) {
               span.style.width = hide_n - 1 + "px";
             } else {
+              span.style.width = 0;
               clearInterval(hide_timer);
               hide_timer = null;
             }

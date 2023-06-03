@@ -1,12 +1,11 @@
 <template>
   <q-page class="CenturyGothic" style="overflow-x: hidden">
+    <!--StaryBg /-->
     <!--This section is used to animate my name-->
     <div @mouseover="extend = true" @mouseleave="extend = false">
       <h1 class="text-accent">
-        Jason<NameAnim label="Piedra" :extend="extend" /><NameAnim
-          label="Matamoros"
-          :extend="extend"
-        />
+        Jason<NameAnim label="Piedra" :extend="extend" />
+        <NameAnim label="Matamoros" :extend="extend" />
       </h1>
     </div>
     <!---->
@@ -48,8 +47,8 @@
             </q-item></q-item-section
           ></q-list
         ></q-card
-      ><q-card dark
-        ><h3>Professional Experience</h3>
+      ><q-card dark>
+        <h3>Professional Experience</h3>
         <q-list
           ><q-item-section
             ><q-item
@@ -75,18 +74,29 @@
               company.</q-item
             ></q-item-section
           ></q-list
-        ><text>
-          Technical Skills Programming Languages HTML ●●●●● Python ●●●●●
-          JavaScript - .Net ●●●●● C ●●●●○ C++ ●●●●○ CSS ●●●●○ Frontend Vue -
-          Vuetify - Quasar ●●●●● Wordpress - Elementor ●●●●● React ●●●●○
-          Databases SQL - MySQL ●●●●● MongoDB ●●●●○ Firebase ●●●●○ Engines Unity
-          ●●●●○ Unreal Engine 5 ●●●●○ Godot ●●○○○ Tools Visual Studio Code ●●●●●
-          GitHub ●●●●● Office 365 & Figma ●●●●● Postman ●●●●○ SSMS ●●●●○ Docker
-          ●●●●○ Personality Traits Soft Skills Teamwork Active listening
-          Confidence Creativity Patience Attention to detail Assertive
-          communication Adaptability Proactivity Hobbies Exercise Art Gaming
-          Music Series Hangouts</text
         ></q-card
+      >
+      <q-card dark>
+        <h3>Technical Skills</h3>
+        <h4>Programming Languages</h4>
+        HTML ●●●●● Python ●●●●● JavaScript - .Net ●●●●● C ●●●●○ C++ ●●●●○ CSS
+        ●●●●○
+        <h4>Frontend</h4>
+        Vue - Vuetify - Quasar ●●●●● Wordpress - Elementor ●●●●● React ●●●●○
+        <h4>Databases</h4>
+        SQL - MySQL ●●●●● MongoDB ●●●●○ Firebase ●●●●○ Engines Unity ●●●●○
+        Unreal Engine 5 ●●●●○ Godot ●●○○○
+        <h4>Tools</h4>
+        Visual Studio Code ●●●●● GitHub ●●●●● Office 365 & Figma ●●●●● Postman
+        ●●●●○ SSMS ●●●●○ Docker ●●●●○</q-card
+      >
+      <q-card dark>
+        <h3>Personality Traits</h3>
+        <h4>Soft Skills</h4>
+        Teamwork Active listening Confidence Creativity Patience Attention to
+        detail Assertive communication Adaptability Proactivity
+        <h4>Hobbies</h4>
+        Exercise Art Gaming Music Series Hangouts</q-card
       >
     </div>
   </q-page>
@@ -94,6 +104,7 @@
 
 <script>
 import NameAnim from "../components/NameAnim.vue";
+//import StaryBg from "../components/StaryBg.vue";
 export default {
   name: "IndexPage",
   data() {
@@ -117,6 +128,7 @@ export default {
   },
   components: {
     NameAnim,
+    //StaryBg,
   },
 };
 </script>

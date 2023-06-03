@@ -6,16 +6,16 @@
 
 //Declare a class which applies it
 .CenturyGothic {
-  color: $secondary;
   font-family: "Century Gothic";
+  color: $secondary;
 }
 
 body {
   display: flex;
-  background-color: $primary;
-  position: relative;
-  left: 10px;
   overflow-x: clip;
+  position: relative;
+  background-color: $primary;
+  left: 10px;
   height: 100%;
 }
 
