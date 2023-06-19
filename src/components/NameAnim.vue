@@ -13,12 +13,11 @@
 </template>
 
 <style>
-.NAword {
-  width: fit-content;
-  overflow-x: visible;
-}
 .NAspan {
   opacity: 0;
+  display: inline-block;
+}
+.NAword {
   display: inline-block;
 }
 .space {
