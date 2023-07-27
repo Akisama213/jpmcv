@@ -1,6 +1,6 @@
 <template>
-  <q-page class="CenturyGothic" style="overflow-x: hidden">
-    <StaryBg :extend="extend" />
+  <StaryBg :extend="extend" />
+  <q-page class="CenturyGothic" style="overflow-x: hidden; left: 0.5%">
     <!--This section is used to animate my name-->
     <span @mouseover="extend = true" @mouseleave="extend = false">
       <h1 class="text-accent">
@@ -10,10 +10,14 @@
     </span>
     <h6>Frontend Developer | Software Developer</h6>
 
-    <q-card dark flat key="crad0">
+    <q-card class="card" dark flat key="crad0">
       <q-card-section horizontal>
-        <q-img key="image0" src="src\assets\images\rose.jpg" scale-down />
-        <q-card-section key="textSection0">
+        <q-img
+          class="img_main_page"
+          spinner-color="primary"
+          src="images/rose.jpg"
+        />
+        <q-card-section>
           <h3>Summary</h3>
           <q-list
             ><q-item-section
@@ -38,7 +42,7 @@
         </q-card-section>
       </q-card-section>
     </q-card>
-    <q-card dark flat>
+    <q-card class="card" dark flat>
       <q-card-section horizontal>
         <q-card-section>
           <h3>Education</h3>
@@ -52,15 +56,20 @@
                 Computer Engineering
               </q-item></q-item-section
             ></q-list
-          ></q-card-section
-        >
+          >
+        </q-card-section>
         <q-img
-          src="src\assets\images\lincoln.jpg"
-          fit="contain" /></q-card-section
+          class="img_main_page"
+          spinner-color="primary"
+          src="images/lincoln.jpg" /></q-card-section
     ></q-card>
-    <q-card dark flat>
+    <q-card class="card" dark flat>
       <q-card-section horizontal>
-        <q-img key="image0" src="src\assets\images\bg.jpg" fit="contain" />
+        <q-img
+          class="img_main_page"
+          spinner-color="primary"
+          src="images/bg.jpg"
+        />
         <q-card-section>
           <h3>Professional Experience</h3>
           <q-list
@@ -91,28 +100,73 @@
             ></q-list
           ></q-card-section
         ></q-card-section
-      ></q-card
-    >
-    <q-card dark flat>
+      >
+    </q-card>
+    <q-card class="card" dark flat>
       <q-card-section horizontal>
         <q-card-section>
           <h3>Technical Skills</h3>
-          <h4>Programming Languages</h4>
-          HTML ●●●●● Python ●●●●● JavaScript - .Net ●●●●● C ●●●●○ C++ ●●●●○ CSS
-          ●●●●○
-          <h4>Frontend</h4>
-          Vue - Vuetify - Quasar ●●●●● Wordpress - Elementor ●●●●● React ●●●●○
-          <h4>Databases</h4>
-          SQL - MySQL ●●●●● MongoDB ●●●●○ Firebase ●●●●○ Engines Unity ●●●●○
-          Unreal Engine 5 ●●●●○ Godot ●●○○○
-          <h4>Tools</h4>
-          Visual Studio Code ●●●●● GitHub ●●●●● Office 365 & Figma ●●●●● Postman
-          ●●●●○ SSMS ●●●●○ Docker ●●●●○</q-card-section
-        ><q-img src="src\assets\images\yo.jpg" /></q-card-section
+          <q-card-section horizontal>
+            <q-card-section>
+              <h4>Programming Languages</h4>
+              <q-list
+                ><q-item-section>
+                  <q-item>HTML ●●●●● </q-item>
+                  <q-item>Python ●●●●● </q-item>
+                  <q-item>JavaScript - .Net ●●●●● </q-item>
+                  <q-item>C ●●●●○ </q-item>
+                  <q-item>C++ ●●●●○ </q-item>
+                  <q-item>CSS ●●●●○</q-item></q-item-section
+                ></q-list
+              >
+              <h4>Frontend</h4>
+              <q-list
+                ><q-item-section>
+                  <q-item>Vue - Vuetify - Quasar ●●●●● </q-item>
+                  <q-item>Wordpress - Elementor ●●●●● </q-item>
+                  <q-item>React ●●●●○</q-item></q-item-section
+                ></q-list
+              > </q-card-section
+            ><q-card-section>
+              <h4>Databases</h4>
+              <q-list
+                ><q-item-section>
+                  <q-item>SQL - MySQL ●●●●● </q-item>
+                  <q-item>MongoDB ●●●●○ </q-item>
+                  <q-item>Firebase ●●●●○ </q-item>
+                  <q-item>Engines Unity ●●●●○</q-item>
+                  <q-item>Unreal Engine 5 ●●●●○ </q-item>
+                  <q-item>Godot ●●○○○</q-item></q-item-section
+                ></q-list
+              >
+              <h4>Tools</h4>
+              <q-list
+                ><q-item-section>
+                  <q-item>Studio Code ●●●●●</q-item>
+                  <q-item>GitHub ●●●●●</q-item>
+                  <q-item>Office 365 & Figma ●●●●● </q-item>
+                  <q-item>Postman ●●●●○ </q-item>
+                  <q-item>SSMS ●●●●○ </q-item>
+                  <q-item>Docker ●●●●○</q-item></q-item-section
+                >
+              </q-list>
+            </q-card-section>
+          </q-card-section>
+        </q-card-section>
+
+        <q-img
+          class="img_main_page"
+          spinner-color="primary"
+          src="images/yo.jpg"
+        /> </q-card-section
     ></q-card>
-    <q-card dark flat>
+    <q-card class="card" dark flat>
       <q-card-section horizontal>
-        <q-img key="image0" src="src\assets\images\Yoshi.gif" />
+        <q-img
+          class="img_main_page"
+          spinner-color="primary"
+          src="images/Yoshi.gif"
+        />
         <q-card-section>
           <h3>Personality Traits</h3>
           <h4>Soft Skills</h4>
@@ -125,7 +179,14 @@
     >
   </q-page>
 </template>
-
+<style>
+.card {
+  width: 99.5%;
+}
+.img_main_page {
+  width: 50%;
+}
+</style>
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
