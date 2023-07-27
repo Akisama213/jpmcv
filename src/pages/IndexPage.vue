@@ -15,7 +15,7 @@
         <q-img
           class="img_main_page"
           spinner-color="primary"
-          src="images/rose.jpg"
+          src="images/sign.gif"
         />
         <q-card-section>
           <h3>Summary</h3>
@@ -61,7 +61,7 @@
         <q-img
           class="img_main_page"
           spinner-color="primary"
-          src="images/lincoln.jpg" /></q-card-section
+          src="images/sky.jpg" /></q-card-section
     ></q-card>
     <q-card class="card" dark flat>
       <q-card-section horizontal>
@@ -72,20 +72,35 @@
         />
         <q-card-section>
           <h3>Professional Experience</h3>
-          <q-list
-            ><q-item-section
-              ><q-item
-                >Software Engineer – Intel Corporation March 2022 - February
-                2023 (1 year) Technologies JavaScript, C++, CSS, HTML, .NET,
-                React, MySQL , SSMS, ServiceNow, GitHub, GitLab, Docker, Postman
-                , Jira Accomplishments - Implemented multiple data sorting
-                modules to chart and enlist information for the private online
-                tool my team worked on. - Fixed the technical issues of hundreds
-                of users from 7 countries working on extensive datasets and
-                multiple databases. - Attended daily meetings utilizing Agile
-                method “Scrum” through Jira to administrate challenging
-                deadlines.</q-item
-              ><q-item
+          <h4>Software Engineer – Intel Corporation</h4>
+          <h6>March 2022 - February 2023 (1 year)</h6>
+          <h4>Technologies</h4>
+          <h7
+            >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS, ServiceNow,
+            GitHub, GitLab, Docker, Postman , Jira</h7
+          >
+          <h4>Accomplishments</h4>
+          <q-list>
+            <q-item-section>
+              <q-item>
+                Implemented multiple data sorting modules to chart and enlist
+                information for the private online tool my team worked
+                on.</q-item
+              >
+              <q-item
+                >Fixed the technical issues of hundreds of users from 7
+                countries working on extensive datasets and multiple
+                databases.</q-item
+              >
+              <q-item
+                >Attended daily meetings utilizing Agile method “Scrum” through
+                Jira to administrate challenging deadlines.</q-item
+              >
+            </q-item-section>
+          </q-list>
+          <q-list>
+            <q-item-section>
+              <q-item
                 >- Frontend Developer - Ópticas Jimenez March 2023 - Present
                 (Ongoing) Technologies Windows, Virtual Box, Linux, Python,
                 Odoo, Postgres, MySQL, Postgres, HTML, CSS, WordPress, Elementor
@@ -184,7 +199,8 @@
   width: 99.5%;
 }
 .img_main_page {
-  width: 50%;
+  min-width: 40%;
+  max-width: 50%;
 }
 </style>
 <script>
