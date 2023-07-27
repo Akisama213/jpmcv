@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="34.39584mm"
+   height="34.395836mm"
+   viewBox="0 0 34.395839 34.395836"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="JP.svg"
+   inkscape:export-filename="favicon.ico.png"
+   inkscape:export-xdpi="23.630764"
+   inkscape:export-ydpi="23.630764"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="4"
+     inkscape:cx="77"
+     inkscape:cy="79.25"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="text3339">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2456"
+       originx="-100.54165"
+       originy="-177.27082" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-100.54171,-177.27088)">
+    <g
+       aria-label="J"
+       id="text3339"
+       style="font-size:36.576px;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code';fill-rule:evenodd;stroke-width:0.264583">
+      <path
+         id="path3007-98"
+         style="font-size:36.576px;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code';font-variation-settings:normal;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.34166;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         d="m 112.97713,182.82713 h 5.29167 m -2.64583,0 -1.5e-4,14.56935 c -4e-5,3.63588 -2.96134,6.59732 -6.61444,6.59732 -3.6531,0 -6.61459,-2.96144 -6.61459,-6.61457 0,-3.65318 2.96149,-6.61468 6.61439,-6.61817 1.48712,-0.003 2.85974,0.48754 3.9646,1.31597"
+         sodipodi:nodetypes="cccssscc" />
+      <path
+         id="path3007-98-1"
+         style="font-size:36.576px;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code';font-variation-settings:normal;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.34166;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         d="m 122.50212,206.11047 h -5.29166 m 2.64583,0 1.5e-4,-14.56935 c 4e-5,-3.63588 2.96134,-6.59732 6.61444,-6.59732 3.65309,0 6.61459,2.96144 6.61459,6.61457 0,3.65318 -2.9615,6.61468 -6.61439,6.61817 -1.48713,0.003 -2.85974,-0.48754 -3.96461,-1.31597"
+         sodipodi:nodetypes="cccssscc" />
+    </g>
+  </g>
+</svg>

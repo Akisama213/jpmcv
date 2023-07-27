@@ -44,7 +44,6 @@ export default {
   },
   watch: {
     extend(val) {
-      console.log("Hola, existo, estoy funcionando maso");
       if (val) {
         this.add();
       } else {

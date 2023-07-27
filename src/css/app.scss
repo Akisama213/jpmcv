@@ -1,7 +1,7 @@
 //App global css in SCSS form
 @font-face {
   font-family: Century Gothic;
-  src: url(../assets/fonts/CenturyGothic.woff);
+  src: url(fonts/CenturyGothic.woff);
 }
 
 //Declare a class which applies it
@@ -15,7 +15,6 @@ body {
   overflow-x: clip;
   position: relative;
   background-color: $primary;
-  left: 10px;
   padding-right: 10px;
   height: 100%;
 }
