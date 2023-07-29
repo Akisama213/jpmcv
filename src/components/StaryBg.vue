@@ -11,7 +11,7 @@
   background-size: 5vmin 5vmin;
   position: absolute;
   top: -90%;
-  left: -120%;
+  left: -100%;
   rotate: -15deg;
   height: 100%;
   width: 100%;
@@ -21,7 +21,7 @@
   animation: SBmove 30s linear infinite;
 }
 .SBhold {
-  left: -115%;
+  left: -95%;
   opacity: 30%;
   transition: all 1s ease;
   height: 130%;
