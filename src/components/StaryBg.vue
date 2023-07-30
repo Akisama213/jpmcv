@@ -10,7 +10,7 @@
   background-position: 0% 0%;
   background-size: 4vmin 4vmin;
   position: absolute;
-  top: -55vmin;
+  top: -50vmin;
   left: -50vmin;
   rotate: -14deg;
   height: 80vmin;
@@ -23,7 +23,7 @@
   mask-mode: alpha;
 }
 .SBhold {
-  top: -85vmin;
+  top: -80vmin;
   left: -40vmin;
   opacity: 30%;
   transition: all 1s;

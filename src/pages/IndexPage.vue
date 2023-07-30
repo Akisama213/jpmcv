@@ -3,8 +3,12 @@
   <StaryBg :extend="extend" />
   <q-page class="CenturyGothic" style="overflow-x: hidden; left: 1%">
     <!--This section is used to animate my name-->
-    <span @mouseover="extend = true" @mouseleave="extend = false">
-      <h1 class="text-accent">
+    <span
+      style="display: flex; width: max-content"
+      @mouseover="extend = true"
+      @mouseleave="extend = false"
+    >
+      <h1 style="width: max-content" class="text-accent">
         Jason<NameAnim label="Piedra" :extend="extend" />
         <NameAnim label="Matamoros" :extend="extend" />
       </h1>
@@ -208,11 +212,15 @@
   mask-mode: alpha;
 }
 .extend_notification {
+  background: url(https://lh3.googleusercontent.com/pw/AIL4fc_TxjQ0xklrDRNmaitEcCilP6XFsjWgcd4ct7bbHnsr_PZ3_3Qp5dUtN-TseX06jjAObNAdN4dLznPyn4VZk7e6gjBLjNkEY8_B2gyofMcIF7mH_vMJLFvjn7yUY9v3lPWAItTsLOodDBUWH5HQM6HWMqYX4RRaAwMo5NSKjyLUcSWU8OOtFb0PZRzOmfpRboKuGUYMNIxH8vq2MajcwWmyz19zHZhyk6GpGLBtQvXX24ifyJtjzBM25lZG3IkLE214vvNXxmcddR6PZNN6oROJyxRqgy7ZP5C5O14JD5EYqAjS1kaxhFKi_As4pvphewg3eEAK-i9ZWkkq_zea-BMDmXPPJRwtQTTptOmkovM8uljYxiXoLqS2TG2fkgrEzciyoR6Numq4YRjNOxnLTfZ7csadmq78k0eXiqEyIHZIWLjLux3EJQciAZhfrtX1O7ho3Kr91EoYVS6ulmOjbsEW7ST4lpc9tttLD6u5cjeXNhxwlyrWSH4tEE6UHQDpA0kgjOC4tk8_yK30sYtQS4U4FH7XfOZhIUChzT_dxHgx9TBYNdaEkDuc_nzwU2kAEMbEScZM02wkDH-Mh84tyPLCe_aoDcWzO4i61wSakwI17XQCz2vhWzWm0WavZH26-uqsfjYwR0nuQ627YpfQX8llBh06LzQlgcV47gMM6oy5LZ_HWQ_RWiJVb7RFBjrcCuh8wzYoyYDj-Bhwa2CYlIjqx6L3Wo_jltR8SFrDiGbND1U03ljcmob2LSxtw9S-tu2_XUDW_d07PZUSGKBlPyyVnqLaRL6-KEw84LGJnStwJZfaYraa1Bp2-xJu9-1jMC0qTlQmDKwgSKr1cBKOFolebjRKtG4YEnMp3pBbOKgfj6Z2VJkgT0vjYHn5ApDjvskInAa4prDU6gfKtx8m-MXwrrNroJoIfUHCwE6YJ-mwtFOln7CvOtZByQcz=w462-h346-no?authuser=0)
+    0 0 / cover no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   rotate: 2deg;
   top: 0.5%;
   left: 19%;
   position: absolute;
-  opacity: 50%;
+  opacity: 90%;
 }
 .move_away {
   transition: all 1s ease;
