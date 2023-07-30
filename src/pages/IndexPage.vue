@@ -1,19 +1,25 @@
 <template>
+  <!--Component made for the on hover effect-->
   <StaryBg :extend="extend" />
-  <q-page class="CenturyGothic" style="overflow-x: hidden; left: 0.5%">
+  <q-page class="CenturyGothic" style="overflow-x: hidden; left: 1%">
     <!--This section is used to animate my name-->
     <span @mouseover="extend = true" @mouseleave="extend = false">
       <h1 class="text-accent">
         Jason<NameAnim label="Piedra" :extend="extend" />
         <NameAnim label="Matamoros" :extend="extend" />
       </h1>
+      <div id="extend_notification_text" class="extend_notification">
+        <h5>extend</h5>
+      </div>
     </span>
+
     <h6>Frontend Developer | Software Developer</h6>
 
-    <q-card class="card" dark flat key="crad0">
+    <!--Information Cards-->
+    <q-card class="card" flat key="crad0">
       <q-card-section class="justify-start" horizontal>
         <q-img
-          class="col-5"
+          class="col-7 card_img_left"
           spinner-color="primary"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-v213QWWQznIvKniy-mV2ILrIuRQHOL8EjJ6mQosd85fCC59HCganqKlapbGfw6Lap7e1wgEkNFT51ah0N2FWPuhde2iZyzQFHl7j649nw02L_i5d1x9WxZ32sLJfPS0W-IJcm-2dVzPH81Q90mZDAvIIrikWsCyRa6P6E9ZKBOBK-OBHPprGsV6zbFETJ8EhR51-ybO6QrEKgz2-41vWCyV-YSyOvhbgWaTJlyj7a8Nq-RIQEDWqt5RwbVekP0R1awR8jSBFTAzADLso-pMeaojBxkcgZgR0AmYr-lCOL4G6BdAoRWkYPOwPx_8Or5NcBEMKNiWqq6e7FOMg508hzDW1q-AN2CQ8yxDkhQ2xwz6mTXizl6CKjLiw-K4lbciduFXSRZ3nghoc-dAEW8IT6UeurXAj2djuCbcWGRfT6nt4gvKsFtvJpop55IJhaoBNnNOnQHtyh1kbSluDn_1C1R-aLo6gFfIXXBasVuZb_3BiuEY9p9OIigoGbonDiRvPOpiyoRcjt0hlmbQsioz75_umnHNKSYNlZhDSiHYkQ_aFp65UfgJT7mXdtbsL7Uy4Q8pbszTAWh6xl0Rdi9Xdk6ojiGIAGp1bupXqc17XmJuqUmnQv-YmnGUAkzjG0Hom11E0q50zImIb6iPvQTo8WOwUfVqWkesb1B3O6xxeZV9LsjRa6-0kACOWZW5QvOAI3zdlZPCsDZ18aqPP7WuyV2fiEXaEEe5O8GAuqOvTHYvYbB2_Ez-sWqFqvXXZHD3YMS4mt42TX0x8zxBVbFuysKKKD7miOJlZKrD67H3gSuiNz5214oZwpKHXHKMwMENEhbvRtqXA67Z5AYo9Vw0mhtC1KE23mBKXYa1ILDSh2J3Mw_XDBTwF7hPNfjUwG0HZB72U-AJ_KidLbjRpGm13lBFh4lZJu_JubH7DxYCb56XGxcvN4yzQeUznM=w640-h640-s-no?authuser=0"
         />
@@ -60,9 +66,9 @@
           <h4>Software Engineer – Intel Corporation</h4>
           <h6>March 2022 - February 2023 (1 year)</h6>
           <h4>Technologies</h4>
-          <h7
+          <sub
             >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS, ServiceNow,
-            GitHub, GitLab, Docker, Postman, Jira</h7
+            GitHub, GitLab, Docker, Postman, Jira</sub
           >
           <h4>Accomplishments</h4>
           <q-list>
@@ -185,7 +191,34 @@
 </template>
 <style>
 .card {
-  width: 99.5%;
+  max-height: 80vh;
+  width: 98%;
+  background-color: rgba(#2c1b2c, 0.5);
+}
+.card_img_left {
+  display: block;
+  width: 100%;
+  mask-image: linear-gradient(to right, black, transparent 95%);
+  mask-mode: alpha;
+}
+.card_img_right {
+  display: block;
+  width: 100%;
+  mask-image: linear-gradient(to right, black, transparent 95%);
+  mask-mode: alpha;
+}
+.extend_notification {
+  rotate: 2deg;
+  top: 0.5%;
+  left: 19%;
+  position: absolute;
+  opacity: 50%;
+}
+.move_away {
+  transition: all 1s ease;
+  opacity: 0%;
+  left: 22%;
+  top: -1%;
 }
 </style>
 <script>
@@ -198,19 +231,13 @@ export default {
       extend: false,
     };
   },
-  methods: {
-    getExtend() {
-      return this.extend;
+  watch: {
+    extend(val) {
+      if (val) {
+        const div = document.getElementById("extend_notification_text");
+        div.classList.add("move_away");
+      }
     },
-  },
-  watch: {},
-  mounted() {
-    /*setInterval(OnTick, 10);
-
-    function OnTick() {
-      extend = this.getExtend();
-      console.log("Is extend true?", this.extend);
-    };*/
   },
   components: {
     NameAnim,

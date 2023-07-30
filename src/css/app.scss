@@ -4,21 +4,30 @@
   src: url(fonts/CenturyGothic.woff);
 }
 
-//Declare a class which applies it
-.CenturyGothic {
-  font-family: "Century Gothic";
-  color: $secondary;
-}
-
 body {
   display: flex;
   overflow-x: clip;
   position: relative;
-  background-color: $primary;
-  padding-right: 10px;
+  background: linear-gradient(-45deg, #20393f, $primary, #3f2033);
+  background-size: 400% 400%;
   height: 100%;
+  font-family: "Century Gothic";
+  font-size: 100%;
+  color: $secondary;
+  animation: gradient 15s linear infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 6vmax;
 }

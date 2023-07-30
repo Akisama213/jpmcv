@@ -6,26 +6,29 @@
   background-image: linear-gradient(to right, black, transparent);
 }
 .SBdiv {
-  background: radial-gradient(rgba(0, 0, 0, 1) 8%, transparent 20%);
+  background: radial-gradient(black 50%, transparent 35%);
   background-position: 0% 0%;
-  background-size: 5vmin 5vmin;
+  background-size: 4vmin 4vmin;
   position: absolute;
-  top: -90%;
-  left: -100%;
-  rotate: -15deg;
-  height: 100%;
-  width: 100%;
+  top: -55vmin;
+  left: -50vmin;
+  rotate: -14deg;
+  height: 80vmin;
+  width: 80vmin;
   z-index: -100;
   opacity: 15%;
-  transition: all 1s ease-out;
+  transition: all 1s ease;
   animation: SBmove 30s linear infinite;
+  mask-image: radial-gradient(black, transparent 90%);
+  mask-mode: alpha;
 }
 .SBhold {
-  left: -95%;
+  top: -85vmin;
+  left: -40vmin;
   opacity: 30%;
-  transition: all 1s ease;
-  height: 130%;
-  width: 130%;
+  transition: all 1s;
+  height: 120vmin;
+  width: 120vmin;
 }
 @keyframes SBmove {
   from {
@@ -54,7 +57,6 @@ export default {
   methods: {
     add() {
       const bg = document.getElementById("SBbg");
-      console.log(bg);
       bg.classList.add("SBhold");
     },
     remove() {
