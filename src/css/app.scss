@@ -8,13 +8,15 @@ body {
   display: flex;
   overflow-x: clip;
   position: relative;
-  background: linear-gradient(-45deg, #20393f, $primary, #3f2033);
+  background: linear-gradient(-45deg, #203f37, $primary, #3f2033);
   background-size: 400% 400%;
   height: 100%;
   font-family: "Century Gothic";
-  font-size: 100%;
+  font-size: 1vmax;
+  margin-bottom: 0.3vmax;
+  margin-top: 0.3vmax;
   color: $secondary;
-  animation: gradient 15s linear infinite;
+  animation: gradient 15s infinite;
 }
 @keyframes gradient {
   0% {
@@ -30,4 +32,35 @@ body {
 
 h1 {
   font-size: 6vmax;
+  margin-bottom: 2vmax;
+}
+h2 {
+  font-size: 2.8vmax;
+  margin-top: 0.7vmax;
+  margin-bottom: 0.5vmax;
+}
+h3 {
+  margin-top: 0.5vmax;
+  font-size: 2.4vmax;
+  margin-bottom: 0.8vmax;
+}
+h4 {
+  margin-top: 0.4vmax;
+  font-size: 2vmax;
+  margin-bottom: 0.5vmax;
+}
+h5 {
+  margin-top: 0.4vmax;
+  font-size: 1.6vmax;
+  margin-bottom: 0.5vmax;
+}
+h6 {
+  margin-top: 0.4vmax;
+  font-size: 1.2vmax;
+  margin-bottom: 0.5vmax;
+}
+h7 {
+  margin-top: 0.4vmax;
+  font-size: 0.8vmax;
+  margin-bottom: 0.5vmax;
 }
