@@ -116,8 +116,8 @@
           ></q-card-section
         >
         <q-img
-          class="col-5 card_img_right"
-          src="https://lh3.googleusercontent.com/pw/AIL4fc-mUSX5BdBs7pnz6wIFczUROOfbVQuArBWRu-dCDXmrKIkol4GnmeD7dYEQlRIHKR-Yc3Hu6uH4FaK3CC9KTzfxNnLR4ah5aq4h-T8TBZvkv9Iedtqq-l848p0Vc6BLSbHT0pA3Q7vV4juU02U1ga8QjWNKAszGixT-t40RGY2LwovwUIRgH1wgklP2dCNrrE5_f_zS3BIhY4Xwu71D6WQoxWoDD_Y8jjZwzs3IJdgHc-JCRve-m6KXhJ7SAM0CSIkgQ5IdRQmxC6SfW7kj5E_UzYVIfB5tBwt-6oExXpF41h-qFDgxJnkja9WzJ5tj7Ph7GFLkosji-ngtXCaqhJqsfVYIUgYZ_iOS1ffU3vI03CdwSddEzC6iey1wTmNuYRhoUOZnOqzpnJGrhJtuVwtjhHHUA-WIGlXhAxST4ACQjd-o1IObv2xU3hLsMu5R5ESjtSyaArZJRTPR9v4qaIHgJVQ3TbBdBhHJ4B9FLLvUGYlb4uH3tOTkMdkFFwsk54hS_pJmI8H6JTJY_h5T4hNB5xF33gi7hl3KTQ_VbPFv4AzjaWdQKwSO83Dzktclv0OUA2rJ-hWSl37ZV6V56LMsTrw8ksd10M0zuv3JYujrzq-yhPfobl6lz4HeAoB7SQPDlRsvYCralY1_s1uCBQnQ_LVgnhrx4hK6KPzHR9YEkIc6YQpqtXXcMnAt08mn69alr3fNqxjtcZulutt7AaGSilY-ybm9suhsHnDSYz3VVGrEebgbDZj7iHiidlFAtxAzWoKUqk4qlc9PLnv598GQRqmwcW5ZqUOZR5oMMLaeVIHvlYqanaIAx5q3FXh11xxoqXV9n3OS6a74kugI_2z084MUkiYUhJl8-evUUhJ3P02ZxHR0ELbC5zp0QAi2JiWERH08XaoEKrgGmzrx8a3bJevF31EEk7KgT5wWAYHl-52RHPpRDrhHgHK5=w567-h567-s-no?authuser=0"
+          class="col-7 card_img_right"
+          src="https://lh3.googleusercontent.com/pw/AIL4fc92oahFFdyWezVmaBUK9sGprGj5NA-EEUk8Y333DvyXn5pUug3IRECz92RiPdhJ-p67VeT79_qO8MmLxW1wMDbCgf8f0ltmKGyXRwe41cdH_QSKiN-QWZve7pcfQnQNN7MWKWHBadEeGSspOP5yvU3OwT_quC_GCLuFYZHQFdtiSiA6zI1XQgSHedE6eNnscxbsIs8-RXv4tCyvClRqEEFRmDBkHkNutri1yzZO5bUMPpg0EF9rM3eW4dGzUsmRmpVQdo8ilEu_gbf7DiPVha-kt1mPlkH2ZEakjs_xPf6uGEi8ux3s8pC1onilhbBydHu7_KPQm_VM8ylafmSEgpNL6fiiZVKQQHFF2OqVmqnp16FqxqbByfa8epSmOBm8RxoQTjI6f2_DYeFnoCpRBZNl76dvpFjIGMpGq0OW2YB6qiM6SmmmBQFOBQNxcNjb9Iaul8J8Rr8EdDzE7WLntH88uRWIz3Lv-YfgAku17Z4ZE_PhEttBbYQyJ-dO7FRO0yfxW_wOhWGVBIWvMmFR1Rg5EXwjRqv_w4E2IaQvkcWBWIvPz_6HTBLX9DDcysA8XxmrPfj_0vszPZgenyE4XYq6MpV6CvnmodAaejympKWAJmR11otfHi1jk0WPVnAFgwpZI0HzN2Nght3-IERMsOybJvjDP9x8sbF5jcM02KVJUAYCf9Q9VTXYi1zG4jqdfPedgdlmRICdQd3w-RNxza5fnlp8MjovyaO4htUE1hWVm4UkYpZe8kfMp6zZbcxCA6Amx2U1f9RoRgQEUqroRga3fEeIPhoQYZwcsUO9tzdvLZZ_wyy-oROZbOeRPwxlLY906bUwkC-o8hvtfFoIE2GlXeX2k2j9F0YsTHoAliWtFgltEQaV9QQ7NETrMJWqQ5kVms6GNG3AVVhW0eIr9Qbs84XWUlK3FOlJtH0zppEW9eSKU9T9ZnUyIh62=w1008-h567-s-no?authuser=0"
           spinner-color="primary"
         />
       </q-card-section>
@@ -193,27 +193,28 @@
         <q-img
           class="col-7 card_img_right"
           spinner-color="primary"
-          src="https://lh3.googleusercontent.com/pw/AIL4fc9zLpKOr_RbKw8SN8cigg-GnKU6rK_xbrRihyBh1sasHQZ-X5VWv399tdK-P37U9iY-S8i_KhQTGGHmp1EpxcsaGo9I5kggHCt00d5bs_43wb2TkqfwypoSzDcUQrgfp82KnZH4e_D4GSegtwrlEtvj25rRNyZ2S04srFB3-WSQ96xZSvloKarL2TEvsUJf1LTienuGqxrShRyHdY0v2w9ceYWVD2EVGMX346o5CLngUI4YibJWGtbdgPMyysAHvQ10tXkOHP3dp7KGuJmOfj01bhtZG9hKp4HQBJkML0yu4mxzPB8fBgScz1NeTUP8MiKrwifPrSm_6Ecgn0Y2JRIzfgoLfOgJ2JrV3670nCZ2RgHqz0dQNMkmZyuI3BiRLko5BnKIPYukWKRFKy2q6gI4iRR-mY4U-JFP59SnWV2pUK8w_u7F7w24Vt6K2neLcG2Kimg53Uhp015Qkjk7DfVukn1FLEVEe3rYVarlNLnMHPKOdzkmnPSLXUXqL2bSC0bGKSyPZJA8POT8Cpzx_vw-KAOTewwCgmOyO-uxiA3mdp5VnrBtoLU3WgJK3s092KPkwnG8t2AR9G8aDPQu4IPrvwTWNeUm54MQHU9Wfln2C3na7c7UrGd9U9Qm0Ut8lIC_qMVjktldBoV4EELvMg68YvFzlcpFOa5CljgSdGvxogwy-nM51oI6BLTc2T4P9cN6XzQ3Fd338VA62HPzIyQG_nNW-PevB-8SxKm4O4B5wEzPTOuQgctnhUkYdM8YUK8n77oa6HeOEfs3NFcosAVkuyioLrbAmyyLfDmA9dc-aVzLwyLMXNM7_iFXBbpkrlRSzKfoO46sCJZt-XQFH5osbY5sYiZT7zdy5ZF9lk_U7sn7nJYKslqR4Q2xKxxxVWoFQVuRH6LGbBuQoVRKPDocShAi4-BR3XtSBx98ERiBMaa95KNYR-0o0cbY=w540-h405-s-no?authuser=0"
+          src="https://photos.app.goo.gl/KseJWCnry6pfZgSH6"
       /></q-card-section>
     </q-card>
   </q-page>
 </template>
 <style>
 .card {
-  max-height: 80vh;
+  max-height: 85vh;
   width: 98%;
   background-color: rgba(#2c1b2c, 0.5);
+  overflow-y: scroll;
 }
 .card_img_left {
   display: block;
-  max-height: 80vh;
+  max-height: 85vh;
   width: 100%;
   mask-image: linear-gradient(to right, black, transparent 95%);
   mask-mode: alpha;
 }
 .card_img_right {
   display: block;
-  max-height: 80vh;
+  max-height: 85vh;
   width: 100%;
   mask-image: linear-gradient(to left, black, transparent 95%);
   mask-mode: alpha;
