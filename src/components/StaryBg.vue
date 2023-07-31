@@ -10,8 +10,8 @@
   background-position: 0% 0%;
   background-size: 4vmin 4vmin;
   position: absolute;
-  top: -50vmin;
-  left: -50vmin;
+  top: -45vmin;
+  left: -45vmin;
   rotate: -14deg;
   height: 80vmin;
   width: 80vmin;
@@ -19,12 +19,12 @@
   opacity: 15%;
   transition: all 1s ease;
   animation: SBmove 30s linear infinite;
-  mask-image: radial-gradient(black, transparent 90%);
+  mask-image: radial-gradient(black, transparent 75%);
   mask-mode: alpha;
 }
 .SBhold {
-  top: -80vmin;
-  left: -40vmin;
+  top: -60vmin;
+  left: -35vmin;
   opacity: 30%;
   transition: all 1s;
   height: 120vmin;
