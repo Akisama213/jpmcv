@@ -5,10 +5,9 @@
 }
 
 body {
-  display: flex;
+  position: relative;
   overflow-x: clip;
   overflow-y: hidden;
-  position: relative;
   background: linear-gradient(-45deg, #203f37, $primary, #3f2033);
   background-size: 400% 400%;
   height: 100%;

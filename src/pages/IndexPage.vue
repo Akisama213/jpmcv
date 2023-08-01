@@ -3,26 +3,72 @@
   <div id="Stary">
     <StaryBg :extend="extend" />
   </div>
-  <q-page id="Main_Page" style="left: 1%">
+  <q-page id="Main_Page">
     <!--This section is used to animate my name-->
+    <div style="margin-left: 1vw">
+      <div id="JasonPM" style="display: flex">
+        <h1
+          @mouseover="extend = true"
+          @mouseleave="extend = false"
+          class="text-accent"
+          style="
+            width: fit-content;
+            display: inline;
+            margin-top: 4vh;
+            margin-bottom: 1vh;
+          "
+        >
+          Jason<NameAnim label="Piedra" :extend="extend" />
+          <NameAnim label="Matamoros" :extend="extend" />
+        </h1>
+        <div id="extend_notification_text" class="extend_notification">
+          <h4>hover</h4>
+        </div>
+      </div>
 
-    <div id="JasonPM" style="margin-top: 2vmax">
-      <h1
-        @mouseover="extend = true"
-        @mouseleave="extend = false"
-        class="text-accent"
-        style="width: max-content; display: inline"
-      >
-        Jason<NameAnim label="Piedra" :extend="extend" />
-        <NameAnim label="Matamoros" :extend="extend" />
-      </h1>
-      <div id="extend_notification_text" class="extend_notification">
-        <h4>hover</h4>
+      <h6>Frontend Developer | Software Developer</h6>
+    </div>
+    <div id="Scroll">
+      <div class="shape">
+        <div
+          id="scrollText"
+          style="position: absolute; transform: translate(-50%, -50%)"
+        >
+          <svg id="rotatingText" viewBox="0 0 300 300" width="600" height="600">
+            <defs>
+              <path
+                id="circle"
+                d="M 150, 150
+                m -100, 0
+                a 100, 100 0 1, 1 200, 0
+                a 100, 100 0 1, 1 -200, 0
+                "
+              ></path>
+            </defs>
+            <text width="400">
+              <textPath
+                class="text"
+                style="
+                  font-weight: 600;
+                  letter-spacing: 1.7px;
+                  font-size: 2.8vmax;
+                  fill: #000000;
+                "
+                alignment-baseline="top"
+                xlink:href="#circle"
+              >
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+              </textPath>
+            </text>
+          </svg>
+        </div>
       </div>
     </div>
-
-    <h6>Frontend Developer | Software Developer</h6>
-
     <!--Information Cards-->
     <div
       id="Cards"
@@ -204,6 +250,125 @@
   </q-page>
 </template>
 <style>
+#scrollText {
+  mask-image: linear-gradient(black, transparent 60%);
+  mask-mode: alpha;
+}
+#rotatingText {
+  animation: rotation 15s infinite linear;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.shape {
+  content: "scroll";
+  position: absolute;
+  opacity: 50%;
+  left: 50vw;
+  top: 90vh;
+  width: 0vmax;
+  height: 0vmax;
+  transform: translate(-50%, -50%);
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-bottom: 1vmax solid transparent;
+  border-top-left-radius: 10vmax;
+  border-top-right-radius: 10vmax;
+  margin: 0 auto;
+  display: inline-block;
+  animation: arrow 3s ease infinite;
+}
+.shape::before {
+  content: "";
+  width: 15vmax;
+  height: 15vmax;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-bottom: 1vmax solid transparent;
+  border-top-left-radius: 20vmax;
+  border-top-right-radius: 20vmax;
+  margin: 0 auto;
+  animation: arrow-part 3s infinite;
+  animation-delay: 1.5s;
+}
+.shape::after {
+  content: "";
+  width: 30vmax;
+  height: 30vmax;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-bottom: 1vmax solid transparent;
+  border-top-left-radius: 20vmax;
+  border-top-right-radius: 20vmax;
+  margin: 0 auto;
+  animation: arrow-part 3s infinite;
+}
+@keyframes arrow {
+  0% {
+    transform: translate(-50%, -50%);
+    border-top: vmax solid black;
+  }
+  20% {
+    transform: translate(-50%, 50%);
+    border-right: 1.5vmax solid transparent;
+    border-top: 1.5vmax solid black;
+    border-left: 1.5vmax solid transparent;
+    border-bottom: 1.5vmax solid transparent;
+  }
+  50% {
+    transform: translate(-50%, 20%);
+  }
+  60% {
+    transform: translate(-50%, 50%);
+    border-right: 1.5vmax solid transparent;
+    border-top: 1.5vmax solid black;
+    border-left: 1.5vmax solid transparent;
+    border-bottom: 1.5vmax solid transparent;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    border-top: vmax solid black;
+  }
+}
+@keyframes arrow-part {
+  0% {
+    width: 0vmax;
+    height: 0vmax;
+  }
+  80% {
+    width: 8vmax;
+    height: 8vmax;
+    opacity: 100%;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+    border-bottom: 1vmax solid transparent;
+  }
+  100% {
+    width: 8vmax;
+    height: 8vmax;
+    border-right: 0vmax solid transparent;
+    border-top: 0vmax solid black;
+    border-left: 0vmax solid transparent;
+    border-bottom: 0vmax solid transparent;
+  }
+}
 .leave_up {
   transform: all 1s ease-out;
   opacity: 0;
@@ -233,9 +398,9 @@
   background-size: 600%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  top: 0vmax;
+  top: 8vh;
   rotate: 16deg;
-  left: 24.8vmax;
+  left: 25vmax;
   position: absolute;
   opacity: 90%;
   animation: float 2s ease-in-out infinite;
@@ -252,10 +417,10 @@
   }
 }
 .move_away {
-  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 1.1s ease;
+  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
   rotate: -60deg;
   top: -2.5vmax;
-  left: 29vmax;
+  left: 35vmax;
   opacity: 0%;
 }
 </style>
