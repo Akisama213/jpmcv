@@ -14,8 +14,7 @@ body {
   width: 100%;
   font-family: "Century Gothic";
   font-size: 1vmax;
-  margin-bottom: 0.3vmax;
-  margin-top: 0.3vmax;
+  margin: 0.5em 0;
   color: $secondary;
   animation: gradient 15s infinite;
 }
@@ -32,36 +31,32 @@ body {
 }
 
 h1 {
-  font-size: 6vmax;
-  margin-bottom: 2vmax;
+  font-size: 6em;
+  margin-bottom: 0.5em;
+  line-height: 0.5em;
 }
 h2 {
-  font-size: 2.8vmax;
-  margin-top: 0.7vmax;
-  margin-bottom: 0.5vmax;
+  font-size: 0.8em;
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
 }
 h3 {
-  margin-top: 0.5vmax;
-  font-size: 2.4vmax;
-  margin-bottom: 0.8vmax;
+  margin-top: 0.1em;
+  font-size: 2.4em;
+  margin-bottom: 0.8em;
 }
 h4 {
-  margin-top: 0.4vmax;
-  font-size: 2vmax;
-  margin-bottom: 0.5vmax;
+  margin-top: 0.1em;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 h5 {
-  margin-top: 0.4vmax;
-  font-size: 1.6vmax;
-  margin-bottom: 0.5vmax;
+  margin-top: 0.1em;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
 }
 h6 {
-  margin-top: 0.4vmax;
-  font-size: 1.2vmax;
-  margin-bottom: 0.5vmax;
-}
-h7 {
-  margin-top: 0.4vmax;
-  font-size: 0.8vmax;
-  margin-bottom: 0.5vmax;
+  margin-top: 0.1em;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
 }

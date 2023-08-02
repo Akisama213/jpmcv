@@ -13,9 +13,10 @@
           class="text-accent"
           style="
             width: fit-content;
-            display: inline;
-            margin-top: 4vh;
-            margin-bottom: 1vh;
+            height: fit-content;
+            display: inline-block;
+            margin-top: 0.6em;
+            margin-bottom: 0.5em;
           "
         >
           Jason<NameAnim label="Piedra" :extend="extend" />
@@ -34,35 +35,31 @@
           id="scrollText"
           style="position: absolute; transform: translate(-50%, -50%)"
         >
-          <svg id="rotatingText" viewBox="0 0 300 300" width="600" height="600">
+          <svg
+            id="rotatingText"
+            preserve-aspect-ratio="true"
+            viewBox="0 0 200 200"
+            width="40vmax"
+            height="40vmax"
+          >
             <defs>
               <path
                 id="circle"
-                d="M 150, 150
-                m -100, 0
-                a 100, 100 0 1, 1 200, 0
-                a 100, 100 0 1, 1 -200, 0
+                d="M 100 100
+                m -50, 0
+                a 50, 50 0 1, 1 100, 0
+                a 50, 50 0 1, 1 -100, 0 Z
                 "
               ></path>
             </defs>
-            <text width="400">
+            <text>
               <textPath
                 class="text"
-                style="
-                  font-weight: 600;
-                  letter-spacing: 1.7px;
-                  font-size: 2.8vmax;
-                  fill: #000000;
-                "
+                style="font-weight: 600; letter-spacing: 1.7px; font-size: 19"
                 alignment-baseline="top"
                 xlink:href="#circle"
               >
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
-                scroll scroll scroll scroll scroll scroll scroll scroll scroll
+                scroll scroll scroll scroll scroll
               </textPath>
             </text>
           </svg>

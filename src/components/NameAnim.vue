@@ -1,11 +1,12 @@
 <template>
-  <text class="space" :id="label + '.space'">-</text>
+  <text class="space" height="0px" :id="label + '.space'">-</text>
   <span class="NAword">
     <span
       class="NAspan"
       v-for="n in splitLabel.length"
       :id="label + '.' + (n - 1)"
       :key="splitLabel[n - 1]"
+      height="min-content"
     >
       {{ splitLabel[n - 1] }}
     </span>
@@ -16,12 +17,14 @@
 .NAspan {
   opacity: 0;
   display: inline-block;
+  height: 2px;
 }
 .NAword {
   display: inline-block;
 }
 .space {
   width: 0;
+  height: 2px;
   opacity: 0;
   transition: 0.6s;
   display: inline-block;
@@ -29,9 +32,9 @@
 .minus {
   width: 0px;
   opacity: 0;
-  transform: translateX(-50px);
-  transition: width v-bind(letterTimeS) ease-in, transform 0.35s ease-in,
-    opacity 0.22s ease-in;
+  transform: translateX(-3vmax);
+  transition: width v-bind(letterTimeS), transform 0.18s linear,
+    opacity 0.15s ease-in;
 }
 .fade {
   opacity: 1;
@@ -52,8 +55,8 @@ export default {
     return {
       splitLabel: this.label.split(""),
       wait: Date.now(),
-      letterTimeE: 2000 / this.label.length + "ms",
-      letterTimeS: 1500 / this.label.length + "ms",
+      letterTimeE: 1500 / this.label.length + "ms",
+      letterTimeS: 2000 / this.label.length + "ms",
     };
   },
   watch: {
@@ -103,7 +106,7 @@ export default {
     animateExtension() {
       let label = this.label;
 
-      this.classPerLetterE(label.length - 1, 50 / label.length);
+      this.classPerLetterE(label.length - 1, 100 / label.length);
     },
     //
     // ---Animate Shortening sub-functions---
@@ -127,7 +130,7 @@ export default {
     },
     //Function to add the class and function that animate the shortening of the characters
     animateShortening() {
-      this.classPerLetterS(this.label.length - 1, 400 / this.label.length);
+      this.classPerLetterS(this.label.length - 1, 300 / this.label.length);
     },
   },
   mounted() {
