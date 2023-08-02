@@ -5,7 +5,7 @@
   </div>
   <q-page id="Main_Page">
     <!--This section is used to animate my name-->
-    <div style="margin-left: 1vw">
+    <div style="margin-left: 1em">
       <div id="JasonPM" style="display: flex">
         <h1
           @mouseover="extend = true"
@@ -15,8 +15,8 @@
             width: fit-content;
             height: fit-content;
             display: inline-block;
-            margin-top: 0.6em;
-            margin-bottom: 0.5em;
+            margin-top: 0.3em;
+            margin-bottom: 0.2em;
           "
         >
           Jason<NameAnim label="Piedra" :extend="extend" />
@@ -27,11 +27,12 @@
         </div>
       </div>
 
-      <h6>Frontend Developer | Software Developer</h6>
+      <h6 id="Subtitle">Frontend Developer | Software Developer</h6>
     </div>
-    <div id="Scroll">
+    <div id="Scroll" class="scroll_section">
       <div class="shape">
         <div
+          @click="card_menu()"
           id="scrollText"
           style="position: absolute; transform: translate(-50%, -50%)"
         >
@@ -248,8 +249,9 @@
 </template>
 <style>
 #scrollText {
-  mask-image: linear-gradient(black, transparent 60%);
+  mask-image: linear-gradient(black 50%, transparent 55%);
   mask-mode: alpha;
+  opacity: 50%;
 }
 #rotatingText {
   animation: rotation 15s infinite linear;
@@ -265,7 +267,7 @@
 .shape {
   content: "scroll";
   position: absolute;
-  opacity: 50%;
+  opacity: 40%;
   left: 50vw;
   top: 90vh;
   width: 0vmax;
@@ -274,7 +276,6 @@
   border-right: 1vmax solid transparent;
   border-top: 1vmax solid black;
   border-left: 1vmax solid transparent;
-  border-bottom: 1vmax solid transparent;
   border-top-left-radius: 10vmax;
   border-top-right-radius: 10vmax;
   margin: 0 auto;
@@ -292,7 +293,6 @@
   border-right: 1vmax solid transparent;
   border-top: 1vmax solid black;
   border-left: 1vmax solid transparent;
-  border-bottom: 1vmax solid transparent;
   border-top-left-radius: 20vmax;
   border-top-right-radius: 20vmax;
   margin: 0 auto;
@@ -310,7 +310,6 @@
   border-right: 1vmax solid transparent;
   border-top: 1vmax solid black;
   border-left: 1vmax solid transparent;
-  border-bottom: 1vmax solid transparent;
   border-top-left-radius: 20vmax;
   border-top-right-radius: 20vmax;
   margin: 0 auto;
@@ -319,57 +318,72 @@
 @keyframes arrow {
   0% {
     transform: translate(-50%, -50%);
-    border-top: vmax solid black;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
   }
   20% {
     transform: translate(-50%, 50%);
     border-right: 1.5vmax solid transparent;
     border-top: 1.5vmax solid black;
     border-left: 1.5vmax solid transparent;
-    border-bottom: 1.5vmax solid transparent;
   }
-  50% {
+  30% {
     transform: translate(-50%, 20%);
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
   }
-  60% {
+  40% {
     transform: translate(-50%, 50%);
     border-right: 1.5vmax solid transparent;
     border-top: 1.5vmax solid black;
     border-left: 1.5vmax solid transparent;
-    border-bottom: 1.5vmax solid transparent;
   }
   100% {
     transform: translate(-50%, -50%);
     border-top: vmax solid black;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
   }
 }
 @keyframes arrow-part {
   0% {
-    width: 0vmax;
-    height: 0vmax;
-  }
-  80% {
-    width: 8vmax;
-    height: 8vmax;
-    opacity: 100%;
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-    border-bottom: 1vmax solid transparent;
-  }
-  100% {
     width: 8vmax;
     height: 8vmax;
     border-right: 0vmax solid transparent;
     border-top: 0vmax solid black;
     border-left: 0vmax solid transparent;
-    border-bottom: 0vmax solid transparent;
   }
-}
-.leave_up {
-  transform: all 1s ease-out;
-  opacity: 0;
-  transform: translateY(5vh);
+  15% {
+    width: 8vmax;
+    height: 8vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  70% {
+    width: 5.25vmax;
+    height: 5.25vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  90% {
+    width: 2vmax;
+    height: 2vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  100% {
+    width: 2vmax;
+    height: 2vmax;
+    border-right: 0vmax solid transparent;
+    border-top: 0vmax solid black;
+    border-left: 0vmax solid transparent;
+  }
 }
 .card {
   height: 80vh;
@@ -395,9 +409,9 @@
   background-size: 600%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  top: 8vh;
+  top: 2em;
   rotate: 16deg;
-  left: 25vmax;
+  left: 25.5em;
   position: absolute;
   opacity: 90%;
   animation: float 2s ease-in-out infinite;
@@ -415,10 +429,29 @@
 }
 .move_away {
   transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
-  rotate: -60deg;
+  rotate: -100deg;
   top: -2.5vmax;
   left: 35vmax;
   opacity: 0%;
+}
+.scroll_section {
+  opacity: 0;
+}
+.visible_scroll {
+  transition: opacity 3s;
+  transition-delay: 1s;
+  opacity: 1;
+}
+.show_cards_a {
+  position: absolute;
+  opacity: 0;
+  transition: all 2s ease-out;
+  top: 0vh;
+}
+.show_cards_b {
+  opacity: 1;
+  transition: all 2s ease-out;
+  transform: rotate(0);
 }
 </style>
 <script>
@@ -430,14 +463,15 @@ export default {
   data() {
     return {
       extend: false,
-      scroll: 0,
     };
   },
   created() {
     this.unwatch = this.$watch("extend", (val) => {
       if (val) {
-        const div = document.getElementById("extend_notification_text");
-        div.classList.add("move_away");
+        const hover = document.getElementById("extend_notification_text");
+        hover.classList.add("move_away");
+        const scroll = document.getElementById("Scroll");
+        scroll.classList.add("visible_scroll");
         this.unwatch();
       }
     });
@@ -446,6 +480,20 @@ export default {
       console.log(mouse.deltaY);
       this.scroll = mouse.deltaY;
     };
+  },
+  methods: {
+    card_menu() {
+      let element = document.getElementById("Stary");
+      element.classList.add("show_cards_a");
+      element = document.getElementById("JasonPM");
+      element.classList.add("show_cards_a");
+      element = document.getElementById("Scroll");
+      element.classList.add("show_cards_a");
+      element = document.getElementById("Subtitle");
+      element.classList.add("show_cards_a");
+      element = document.getElementById("Cards");
+      element.classList.add("show_cards_b");
+    },
   },
   components: {
     NameAnim,
