@@ -1,176 +1,174 @@
 <template>
-  <!--Component made for the on hover effect-->
-  <div id="Stary">
-    <StaryBg :extend="extend" />
-  </div>
   <q-page id="Main_Page">
-    <!--This section is used to animate my name-->
-    <div style="margin-left: 1em">
-      <div id="JasonPM" style="display: flex">
-        <h1
-          @mouseover="extend = true"
-          @mouseleave="extend = false"
-          class="text-accent"
-          style="
-            width: fit-content;
-            height: fit-content;
-            display: inline-block;
-            margin-top: 0.3em;
-            margin-bottom: 0.2em;
-          "
-        >
-          Jason<NameAnim label="Piedra" :extend="extend" />
-          <NameAnim label="Matamoros" :extend="extend" />
-        </h1>
-        <div id="extend_notification_text" class="extend_notification">
-          <h4>hover</h4>
-        </div>
-      </div>
-
-      <h6 id="Subtitle">Frontend Developer | Software Developer</h6>
-    </div>
-    <div id="Scroll" class="scroll_section">
-      <div class="shape">
-        <div
-          @click="card_menu()"
-          id="scrollText"
-          style="position: absolute; transform: translate(-50%, -50%)"
-        >
-          <svg
-            id="rotatingText"
-            preserve-aspect-ratio="true"
-            viewBox="0 0 200 200"
-            width="40vmax"
-            height="40vmax"
+    <div id="Opener" style="transition: all 2s">
+      <!--Component made for the on hover effect-->
+      <StaryBg :extend="extend" />
+      <div style="margin-left: 1em">
+        <!--This section is used to animate my name-->
+        <div style="display: flex">
+          <h1
+            @mouseover="extend = true"
+            @mouseleave="extend = false"
+            class="text-accent"
+            style="
+              width: fit-content;
+              height: fit-content;
+              display: inline-block;
+              margin-top: 0.3em;
+              margin-bottom: 0.2em;
+            "
           >
-            <defs>
-              <path
-                id="circle"
-                d="M 100 100
+            Jason<NameAnim label="Piedra" :extend="extend" />
+            <NameAnim label="Matamoros" :extend="extend" />
+          </h1>
+          <div id="extend_notification_text" class="extend_notification">
+            <h4>hover</h4>
+          </div>
+        </div>
+
+        <h6>Frontend Developer | Software Developer</h6>
+      </div>
+      <div id="Scroll" class="scroll_section">
+        <div class="shape">
+          <div
+            @click="card_menu()"
+            id="scrollText"
+            style="position: absolute; transform: translate(-50%, -50%)"
+          >
+            <svg
+              id="rotatingText"
+              preserve-aspect-ratio="true"
+              viewBox="0 0 200 200"
+              width="40vmax"
+              height="40vmax"
+            >
+              <defs>
+                <path
+                  id="circle"
+                  d="M 100 100
                 m -50, 0
                 a 50, 50 0 1, 1 100, 0
                 a 50, 50 0 1, 1 -100, 0 Z
                 "
-              ></path>
-            </defs>
-            <text>
-              <textPath
-                class="text"
-                style="font-weight: 600; letter-spacing: 1.7px; font-size: 19"
-                alignment-baseline="top"
-                xlink:href="#circle"
-              >
-                scroll scroll scroll scroll scroll
-              </textPath>
-            </text>
-          </svg>
+                ></path>
+              </defs>
+              <text>
+                <textPath
+                  style="
+                    font-weight: 600;
+                    letter-spacing: 1.7px;
+                    font-size: 18;
+                    opacity: 50%;
+                  "
+                  alignment-baseline="top"
+                  xlink:href="#circle"
+                >
+                  scroll scroll scroll scroll scroll
+                </textPath>
+              </text>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
+
     <!--Information Cards-->
     <div
       id="Cards"
-      class="row no-wrap absolute-center"
-      style="width: max-content; overflow-x: auto; transform: translateY(100%)"
+      class="row no-wrap show_cards_b"
+      style="
+        overflow-x: hidden;
+        overflow-y: hidden;
+        top: 10vh;
+        left: 10vw;
+        position: absolute;
+        transition: all 2s;
+        width: max-content;
+      "
     >
-      <q-card class="card q-mx-xl" dark flat>
-        <q-card-section class="justify-start" horizontal>
-          <q-img
-            class="col-5 card_img_left"
-            spinner-color="primary"
-            src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
-          />
-          <q-card-section class="col">
+      <q-card class="column card q-mr-xl" flat>
+        <q-img
+          class="col-auto"
+          loading="lazy"
+          style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
+          spinner-color="rgba(1, 1, 1, 0.5)"
+          src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
+        />
+        <div class="col-auto">
+          <div style="padding-left: 2%; padding-right: 2%">
             <h3>About</h3>
-            <q-list
-              ><q-item-section
-                ><q-item
-                  >Dependable Frontend Developer with creative and effective
-                  problem solving.</q-item
-                ><q-item
-                  >Native Spanish speaker with excellent proficiency in English
-                  (C1).</q-item
-                ><q-item
-                  >Invested in hard work and collaboration to get accurate
-                  solutions efficiently.</q-item
-                ><q-item
-                  >Always willing to learn, be it from coworkers or
-                  self-studying.</q-item
-                ><q-item
-                  >Detail-oriented professional focused in creating intuitive
-                  and innovative UIs.</q-item
-                >
-              </q-item-section>
-            </q-list>
-            <h3>Education</h3>
-            <q-list
-              ><q-item-section
-                ><h5>High School Diploma - Conversational English Diploma</h5>
-                <q-item> Liceo Experimental Bilingüe 2014 - 2019</q-item>
-                <h5>Bachelor’s Degree in Computer Engineering</h5>
-                <q-item>
-                  Tecnológico de Costa Rica 2020 - 2024
-                </q-item></q-item-section
-              ></q-list
+            <text>
+              <b>+ Dependable Frontend Developer</b> with creative and effective
+              <b>problem solving.</b> <br /><br />
+              <b>+</b> Native Spanish speaker with excellent proficiency in
+              <b>English (C1)</b>. <br /><br />
+              <b>+</b> Invested in hard work and <b>collaboration</b> to get
+              accurate solutions efficiently. <br /><br />
+              <b>+</b> Always <b>willing to learn</b>, be it from coworkers or
+              self-studying. <br /><br />
+              <b>+</b> Detail-oriented professional focused in creating
+              <b>intuitive and innovative UIs</b>. <br />
+              <br />
+              <h3>Education</h3>
+              <b>Liceo Experimental Bilingüe</b> <br />2014 - 2019
+              <br />
+              <br />
+              <b>+</b> High School Diploma
+              <br />
+              <b>+</b> Conversational English Diploma
+              <br />
+              <br />
+              <br />
+              <b>Tecnológico de Costa Rica </b><br />
+              2020 - 2025
+              <br />
+              <br />
+              <b>+</b> Bachelor's Degree in <b>Computer Engineering</b></text
             >
-          </q-card-section>
-        </q-card-section>
+          </div>
+        </div>
       </q-card>
-      <q-card class="card q-mx-xl" dark flat>
-        <q-card-section class="justify-end" horizontal>
-          <q-card-section class="col">
-            <h3>Professional Experience</h3>
-            <h4>Software Engineer – Intel Corporation</h4>
-            <h6>March 2022 - February 2023 (1 year)</h6>
+      <q-card class="column card q-mx-xl" flat>
+        <q-img
+          class="col-auto"
+          loading="lazy"
+          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          spinner-color="rgba(1, 1, 1, 0.5)"
+          src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
+        />
+        <div style="width: 40%; padding-left: 2%; padding-right: 2%">
+          <text
+            ><h3>Professional Experience</h3>
+            <h4>Software Engineer - Intel Corporation</h4>
+            March 2022 - February 2023
             <h4>Technologies</h4>
             <sub
               >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS,
               ServiceNow, GitHub, GitLab, Docker, Postman, Jira</sub
             >
             <h4>Accomplishments</h4>
-            <q-list>
-              <q-item-section>
-                <q-item>
-                  Implemented multiple data sorting modules to chart and enlist
-                  information for the private online tool my team worked
-                  on.</q-item
-                >
-                <q-item
-                  >Fixed the technical issues of hundreds of users from 7
-                  countries working on extensive datasets and multiple
-                  databases.</q-item
-                >
-                <q-item
-                  >Attended daily meetings utilizing Agile method “Scrum”
-                  through Jira to administrate challenging deadlines.</q-item
-                >
-              </q-item-section>
-            </q-list>
-            <q-list>
-              <q-item-section>
-                <q-item
-                  >- Frontend Developer - Ópticas Jimenez March 2023 - Present
-                  (Ongoing) Technologies Windows, Virtual Box, Linux, Python,
-                  Odoo, Postgres, MySQL, Postgres, HTML, CSS, WordPress,
-                  Elementor Accomplishments - Designed the landing page needed
-                  for marketing and enhanced the look and feel of all the
-                  sections in the company’s site with multiple devices in mind.
-                  - Rehabilitated the connection of the main private tool for
-                  storing and viewing web orders. - Proposed multiple
-                  improvements in the work environment for futureproofing in
-                  case more developers come to the company.</q-item
-                ></q-item-section
-              ></q-list
-            ></q-card-section
+            Implemented multiple data sorting modules to chart and enlist
+            information for the private online tool my team worked on.<br />
+            Fixed the technical issues of hundreds of users from 7 countries
+            working on extensive datasets and multiple databases.<br />
+            Attended daily meetings utilizing Agile method “Scrum” through Jira
+            to administrate challenging deadlines.<br />
+            Frontend Developer - Ópticas Jimenez March<br />
+            March 2023 - July 2023<br />
+            Technologies <br />Windows, Virtual Box, Linux, Python, Odoo,
+            Postgres, MySQL, Postgres, HTML, CSS, WordPress, Elementor<br />
+            Accomplishments<br />
+            - Designed the landing page needed for marketing and enhanced the
+            look and feel of all the sections in the company's site with
+            multiple devices in mind. <br />
+            - Rehabilitated the connection of the main private tool for storing
+            and viewing web orders. <br />- Proposed multiple improvements in
+            the work environment for futureproofing in case more developers come
+            to the company.</text
           >
-          <q-img
-            class="col-7 card_img_right"
-            src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
-            spinner-color="primary"
-          />
-        </q-card-section>
+        </div>
       </q-card>
-      <q-card class="card q-mx-xl" dark flat>
+      <q-card class="card q-mx-xl" flat>
         <q-card-section class="justify-start" horizontal>
           <q-img
             class="col-5 card_img_left"
@@ -226,9 +224,9 @@
               </q-card-section>
             </q-card-section>
           </q-card-section>
-        </q-card-section></q-card
-      >
-      <q-card class="card q-mx-xl" dark flat>
+        </q-card-section>
+      </q-card>
+      <q-card class="card q-ml-xl" flat>
         <q-card-section class="justify-end" horizontal>
           <q-card-section class="col">
             <h3>Personality Traits</h3>
@@ -247,22 +245,18 @@
     </div>
   </q-page>
 </template>
+
 <style>
+#Gradient {
+  opacity: 0;
+  transition: all 1s ease-in;
+}
 #scrollText {
   mask-image: linear-gradient(black 50%, transparent 55%);
   mask-mode: alpha;
-  opacity: 50%;
 }
 #rotatingText {
   animation: rotation 15s infinite linear;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
 }
 .shape {
   content: "scroll";
@@ -314,6 +308,60 @@
   border-top-right-radius: 20vmax;
   margin: 0 auto;
   animation: arrow-part 3s infinite;
+}
+.card {
+  border-top-left-radius: 2vmax;
+  border-bottom-right-radius: 2vmax;
+  height: 80vh;
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flexbox;
+}
+.extend_notification {
+  background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
+    0 0 / cover no-repeat;
+  background-size: 600%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  top: 2em;
+  rotate: 16deg;
+  left: 25.5em;
+  position: absolute;
+  opacity: 90%;
+  animation: float 2s ease-in-out infinite;
+}
+.move_away {
+  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
+  rotate: -100deg;
+  top: -2.5vmax;
+  left: 35vmax;
+  opacity: 0%;
+}
+.scroll_section {
+  opacity: 0;
+}
+.visible_scroll {
+  transition: opacity 2s;
+  transition-delay: 1s;
+  opacity: 1;
+}
+.show_cards_a {
+  transition: all 2s;
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+.show_cards_b {
+  transition: all 2s;
+  transform: translateY(200vh);
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
 @keyframes arrow {
   0% {
@@ -385,37 +433,6 @@
     border-left: 0vmax solid transparent;
   }
 }
-.card {
-  height: 80vh;
-  width: 90vw;
-  background-color: rgba(#2c1b2c, 0.5);
-  overflow-y: hidden;
-}
-.card_img_left {
-  display: block;
-  height: 85vh;
-  mask-image: linear-gradient(to right, black, transparent 95%);
-  mask-mode: alpha;
-}
-.card_img_right {
-  display: block;
-  height: 85vh;
-  mask-image: linear-gradient(to left, black, transparent 95%);
-  mask-mode: alpha;
-}
-.extend_notification {
-  background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
-    0 0 / cover no-repeat;
-  background-size: 600%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  top: 2em;
-  rotate: 16deg;
-  left: 25.5em;
-  position: absolute;
-  opacity: 90%;
-  animation: float 2s ease-in-out infinite;
-}
 @keyframes float {
   0% {
     transform: translateY(0vmax) rotate(16deg);
@@ -427,33 +444,8 @@
     transform: translateY(0vmax) rotate(16deg);
   }
 }
-.move_away {
-  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
-  rotate: -100deg;
-  top: -2.5vmax;
-  left: 35vmax;
-  opacity: 0%;
-}
-.scroll_section {
-  opacity: 0;
-}
-.visible_scroll {
-  transition: opacity 3s;
-  transition-delay: 1s;
-  opacity: 1;
-}
-.show_cards_a {
-  position: absolute;
-  opacity: 0;
-  transition: all 2s ease-out;
-  top: 0vh;
-}
-.show_cards_b {
-  opacity: 1;
-  transition: all 2s ease-out;
-  transform: rotate(0);
-}
 </style>
+
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
@@ -463,6 +455,9 @@ export default {
   data() {
     return {
       extend: false,
+      scrollShown: false,
+      pageState: 0,
+      wait: 0,
     };
   },
   created() {
@@ -472,27 +467,99 @@ export default {
         hover.classList.add("move_away");
         const scroll = document.getElementById("Scroll");
         scroll.classList.add("visible_scroll");
+        this.scrollShown = true;
         this.unwatch();
       }
     });
 
+    setTimeout(() => {
+      const scroll = document.getElementById("Scroll");
+      scroll.classList.add("visible_scroll");
+      this.scrollShown = true;
+    }, 2000);
+
     onwheel = (mouse) => {
       console.log(mouse.deltaY);
-      this.scroll = mouse.deltaY;
+      if (
+        mouse.deltaY > 99 &&
+        this.scrollShown &&
+        this.wait - Date.now() <= 0
+      ) {
+        this.wait = Date.now() + 1000;
+        console.log("hello");
+        switch (this.pageState) {
+          case 0: {
+            this.card_menu();
+            this.pageState = 1;
+            break;
+          }
+          case 1: {
+            this.slide(1);
+            this.pageState = 2;
+            break;
+          }
+          case 2: {
+            this.slide(2);
+            this.pageState = 3;
+            break;
+          }
+          case 3: {
+            this.slide(3);
+            this.pageState = 4;
+            break;
+          }
+          case 4: {
+            this.pageState = 0;
+            break;
+          }
+        }
+      }
+      if (mouse.deltaY < -99 && this.wait - Date.now() <= 0) {
+        this.wait = Date.now() + 1000;
+        console.log("hello");
+        switch (this.pageState) {
+          case 1: {
+            this.leave_card_menu();
+            this.pageState = 0;
+            break;
+          }
+          case 2: {
+            this.slide(0);
+            this.pageState = 1;
+            break;
+          }
+          case 3: {
+            this.slide(1);
+            this.pageState = 2;
+            break;
+          }
+          case 4: {
+            this.slide(2);
+            this.pageState = 3;
+            break;
+          }
+        }
+      }
     };
   },
   methods: {
     card_menu() {
-      let element = document.getElementById("Stary");
-      element.classList.add("show_cards_a");
-      element = document.getElementById("JasonPM");
-      element.classList.add("show_cards_a");
-      element = document.getElementById("Scroll");
-      element.classList.add("show_cards_a");
-      element = document.getElementById("Subtitle");
+      let element = document.getElementById("Opener");
       element.classList.add("show_cards_a");
       element = document.getElementById("Cards");
+      element.classList.remove("show_cards_b");
+    },
+
+    leave_card_menu() {
+      let element = document.getElementById("Opener");
+      element.classList.remove("show_cards_a");
+      element = document.getElementById("Cards");
       element.classList.add("show_cards_b");
+    },
+
+    slide(n) {
+      let cards = document.getElementById("Cards");
+      cards.style.transform = "translateX(" + -25 * n + "%)";
     },
   },
   components: {

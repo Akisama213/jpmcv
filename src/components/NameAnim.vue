@@ -33,8 +33,7 @@
   width: 0px;
   opacity: 0;
   transform: translateX(-3vmax);
-  transition: width v-bind(letterTimeS), transform 0.18s linear,
-    opacity 0.15s ease-in;
+  transition: width v-bind(letterTimeS), transform 0.4s, opacity 0.1s ease-in;
 }
 .fade {
   opacity: 1;
@@ -56,7 +55,7 @@ export default {
       splitLabel: this.label.split(""),
       wait: Date.now(),
       letterTimeE: 1500 / this.label.length + "ms",
-      letterTimeS: 2000 / this.label.length + "ms",
+      letterTimeS: 2500 / this.label.length + "ms",
     };
   },
   watch: {
@@ -71,11 +70,11 @@ export default {
         }, this.wait - Date.now());
       } else {
         //Timeout to have the shortening and extending not overlap
-        this.wait = Date.now() + 300;
+        this.wait = Date.now() + 500;
         setTimeout(() => {
           if (!this.extend) {
             this.animateShortening();
-            this.wait = Date.now() + 300;
+            this.wait = Date.now() + 500;
           }
         }, this.wait - Date.now());
       }

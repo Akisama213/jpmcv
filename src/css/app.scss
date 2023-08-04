@@ -1,12 +1,7 @@
 //App global css in SCSS form
-@font-face {
-  font-family: Century Gothic;
-  src: url(fonts/CenturyGothic.woff);
-}
-
 body {
   position: relative;
-  overflow-x: clip;
+  overflow-x: hidden;
   overflow-y: hidden;
   background: linear-gradient(-45deg, #203f37, $primary, #3f2033);
   background-size: 400% 400%;
@@ -14,6 +9,7 @@ body {
   width: 100%;
   font-family: "Century Gothic";
   font-size: 1vmax;
+  line-height: 1.2em;
   margin: 0.5em 0;
   color: $secondary;
   animation: gradient 15s infinite;
@@ -33,30 +29,38 @@ body {
 h1 {
   font-size: 6em;
   margin-bottom: 0.5em;
-  line-height: 1em;
+  line-height: 1.2em;
+  color: $accent;
 }
 h2 {
-  font-size: 0.8em;
+  font-size: 2.8em;
   margin-top: 0.1em;
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
 h3 {
-  margin-top: 0.1em;
+  margin-top: 0.2em;
   font-size: 2.4em;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.3em;
+  line-height: 1.2em;
+  color: $accent;
+  opacity: 65%;
 }
 h4 {
   margin-top: 0.1em;
   font-size: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
 }
 h5 {
   margin-top: 0.1em;
-  font-size: 1.6em;
-  margin-bottom: 0.5em;
+  font-size: 1.4em;
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
 }
 h6 {
   margin-top: 0.1em;
   font-size: 1.2em;
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
