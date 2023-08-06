@@ -79,25 +79,24 @@
       style="
         overflow-x: hidden;
         overflow-y: hidden;
-        top: 10vh;
+        bottom: 10vh;
         left: 10vw;
         position: absolute;
         transition: all 2s;
         width: max-content;
       "
     >
-      <q-card class="column card q-mr-xl" flat>
+      <q-card id="card_1" class="column card q-mr-xl" flat>
         <q-img
-          class="col-auto"
           loading="lazy"
           style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
         />
-        <div class="col-auto">
+        <q-scroll-area class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
-            <h3>About</h3>
             <text>
+              <h3>About</h3>
               <b>+ Dependable Frontend Developer</b> with creative and effective
               <b>problem solving.</b> <br /><br />
               <b>+</b> Native Spanish speaker with excellent proficiency in
@@ -123,328 +122,140 @@
               2020 - 2025
               <br />
               <br />
-              <b>+</b> Bachelor's Degree in <b>Computer Engineering</b></text
-            >
+              <b>+</b> Bachelor's Degree in <b>Computer Engineering</b>
+            </text>
           </div>
-        </div>
+        </q-scroll-area>
       </q-card>
-      <q-card class="column card q-mx-xl" flat>
+
+      <q-card id="card_2" class="column card q-mx-xl" flat>
         <q-img
-          class="col-auto"
           loading="lazy"
-          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
         />
-        <div style="width: 40%; padding-left: 2%; padding-right: 2%">
-          <text
-            ><h3>Professional Experience</h3>
-            <h4>Software Engineer - Intel Corporation</h4>
-            March 2022 - February 2023
-            <h4>Technologies</h4>
-            <sub
-              >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS,
-              ServiceNow, GitHub, GitLab, Docker, Postman, Jira</sub
-            >
-            <h4>Accomplishments</h4>
-            Implemented multiple data sorting modules to chart and enlist
-            information for the private online tool my team worked on.<br />
-            Fixed the technical issues of hundreds of users from 7 countries
-            working on extensive datasets and multiple databases.<br />
-            Attended daily meetings utilizing Agile method “Scrum” through Jira
-            to administrate challenging deadlines.<br />
-            Frontend Developer - Ópticas Jimenez March<br />
-            March 2023 - July 2023<br />
-            Technologies <br />Windows, Virtual Box, Linux, Python, Odoo,
-            Postgres, MySQL, Postgres, HTML, CSS, WordPress, Elementor<br />
-            Accomplishments<br />
-            - Designed the landing page needed for marketing and enhanced the
-            look and feel of all the sections in the company's site with
-            multiple devices in mind. <br />
-            - Rehabilitated the connection of the main private tool for storing
-            and viewing web orders. <br />- Proposed multiple improvements in
-            the work environment for futureproofing in case more developers come
-            to the company.</text
-          >
-        </div>
+        <q-scroll-area class="cardText">
+          <div style="padding-left: 2%; padding-right: 2%">
+            <text
+              ><h3>Professional Experience</h3>
+              <h5>Software Engineer - Intel Corporation</h5>
+              March 2022 - February 2023
+              <br />
+              <b>Technologies</b>
+              <br />
+              <sub
+                >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS,
+                ServiceNow, GitHub, GitLab, Docker, Postman, Jira</sub
+              >
+              <br />
+              <b>Accomplishments</b>
+              <br />
+              <b>+</b> Implemented multiple data sorting modules to chart and
+              enlist information for the private online tool my team worked
+              on.<br />
+              <b>+</b> Fixed the technical issues of hundreds of users from 7
+              countries working on extensive datasets and multiple databases.<br />
+              <b>+</b> Attended daily meetings utilizing Agile method “Scrum”
+              through Jira to administrate challenging deadlines.<br />
+              <br />
+              <h5>Frontend Developer - Ópticas Jimenez</h5>
+              <br />
+              March 2023 - July 2023<br />
+              <b>Technologies</b> <br /><sub
+                >Windows, Virtual Box, Linux, Python, Odoo, Postgres, MySQL,
+                Postgres, HTML, CSS, WordPress, Elementor<br
+              /></sub>
+              <b>Accomplishments</b><br />
+              <b>+</b> Designed the landing page needed for marketing and
+              enhanced the look and feel of all the sections in the company's
+              site with multiple devices in mind. <br />
+              <b>+</b> Rehabilitated the connection of the main private tool for
+              storing and viewing web orders. <br /><b>+</b> Proposed multiple
+              improvements in the work environment for futureproofing in case
+              more developers come to the company.
+            </text>
+          </div>
+        </q-scroll-area>
       </q-card>
-      <q-card class="card q-mx-xl" flat>
-        <q-card-section class="justify-start" horizontal>
-          <q-img
-            class="col-5 card_img_left"
-            src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
-            spinner-color="primary"
-          />
-          <q-card-section class="col">
-            <h3>Technical Skills</h3>
-            <q-card-section horizontal>
-              <q-card-section>
-                <h4>Programming Languages</h4>
-                <q-list
-                  ><q-item-section>
-                    <q-item>HTML ●●●●● </q-item>
-                    <q-item>Python ●●●●● </q-item>
-                    <q-item>JavaScript - .Net ●●●●● </q-item>
-                    <q-item>C ●●●●○ </q-item>
-                    <q-item>C++ ●●●●○ </q-item>
-                    <q-item>CSS ●●●●○</q-item></q-item-section
-                  ></q-list
-                >
-                <h4>Frontend</h4>
-                <q-list
-                  ><q-item-section>
-                    <q-item>Vue - Vuetify - Quasar ●●●●● </q-item>
-                    <q-item>Wordpress - Elementor ●●●●● </q-item>
-                    <q-item>React ●●●●○</q-item></q-item-section
-                  ></q-list
-                > </q-card-section
-              ><q-card-section>
-                <h4>Databases</h4>
-                <q-list
-                  ><q-item-section>
-                    <q-item>SQL - MySQL ●●●●● </q-item>
-                    <q-item>MongoDB ●●●●○ </q-item>
-                    <q-item>Firebase ●●●●○ </q-item>
-                    <q-item>Engines Unity ●●●●○</q-item>
-                    <q-item>Unreal Engine 5 ●●●●○ </q-item>
-                    <q-item>Godot ●●○○○</q-item></q-item-section
-                  ></q-list
-                >
-                <h4>Tools</h4>
-                <q-list
-                  ><q-item-section>
-                    <q-item>Studio Code ●●●●●</q-item>
-                    <q-item>GitHub ●●●●●</q-item>
-                    <q-item>Office 365 & Figma ●●●●● </q-item>
-                    <q-item>Postman ●●●●○ </q-item>
-                    <q-item>SSMS ●●●●○ </q-item>
-                    <q-item>Docker ●●●●○</q-item></q-item-section
-                  >
-                </q-list>
-              </q-card-section>
-            </q-card-section>
-          </q-card-section>
-        </q-card-section>
+      <q-card id="card_3" class="column card q-mx-xl" flat>
+        <q-img
+          loading="lazy"
+          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          spinner-color="rgba(1, 1, 1, 0.5)"
+          src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
+        />
+        <q-scroll-area class="cardText">
+          <div style="padding-left: 2%; padding-right: 2%">
+            <text>
+              <h3>Technical Skills</h3>
+              <h5>Programming Languages</h5>
+
+              + HTML ●●●●● <br />
+              + Python ●●●●● <br />
+              + JavaScript - .Net ●●●●● <br />
+              + C ●●●●○ <br />
+              + C++ ●●●●○ <br />
+              + CSS ●●●●○<br />
+              <h5>Frontend</h5>
+
+              + Vue - Vuetify - Quasar ●●●●● <br />
+              + Wordpress - Elementor ●●●●● <br />
+              + React ●●●●○<br />
+              <h5>Databases</h5>
+
+              + SQL - MySQL ●●●●● <br />
+              + MongoDB ●●●●○ <br />
+              + Firebase ●●●●○ <br />
+              <h5>Engines</h5>
+              + Unity ●●●●○<br />
+              + Unreal Engine 5 ●●●●○ <br />
+              + Godot ●●○○○<br />
+              <h5>Tools</h5>
+
+              + Studio Code ●●●●● <br />
+              + GitHub ●●●●● <br />
+              + Office 365 & Figma ●●●●● <br />
+              + Postman ●●●●○<br />
+              + SSMS ●●●●○ <br />
+              + Docker ●●●●○<br />
+            </text>
+          </div>
+        </q-scroll-area>
       </q-card>
-      <q-card class="card q-ml-xl" flat>
-        <q-card-section class="justify-end" horizontal>
-          <q-card-section class="col">
+      <q-card id="card_4" class="column card q-ml-xl" flat>
+        <q-img
+          loading="lazy"
+          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          spinner-color="rgba(1, 1, 1, 0.5)"
+          src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
+        />
+        <q-scroll-area class="cardText">
+          <div style="padding-left: 2%; padding-right: 2%">
             <h3>Personality Traits</h3>
             <h4>Soft Skills</h4>
-            Teamwork Active listening Confidence Creativity Patience Attention
-            to detail Assertive communication Adaptability Proactivity
+            + Teamwork <br />
+            + Active listening <br />
+            + Confidence <br />
+            + Creativity <br />
+            + Patience <br />
+            + Attention to detail <br />
+            + Assertive communication <br />
+            + Adaptability<br />
+            + Proactivity<br />
             <h4>Hobbies</h4>
-            Exercise Art Gaming Music Series Hangouts</q-card-section
-          >
-          <q-img
-            class="col-7 card_img_right"
-            spinner-color="primary"
-            src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
-        /></q-card-section>
+            + Exercise <br />
+            + Art <br />
+            + Gaming <br />
+            + Music <br />
+            + Series <br />
+            + Hangouts<br />
+          </div>
+        </q-scroll-area>
       </q-card>
     </div>
   </q-page>
 </template>
-
-<style>
-#Gradient {
-  opacity: 0;
-  transition: all 1s ease-in;
-}
-#scrollText {
-  mask-image: linear-gradient(black 50%, transparent 55%);
-  mask-mode: alpha;
-}
-#rotatingText {
-  animation: rotation 15s infinite linear;
-}
-.shape {
-  content: "scroll";
-  position: absolute;
-  opacity: 40%;
-  left: 50vw;
-  top: 90vh;
-  width: 0vmax;
-  height: 0vmax;
-  transform: translate(-50%, -50%);
-  border-right: 1vmax solid transparent;
-  border-top: 1vmax solid black;
-  border-left: 1vmax solid transparent;
-  border-top-left-radius: 10vmax;
-  border-top-right-radius: 10vmax;
-  margin: 0 auto;
-  display: inline-block;
-  animation: arrow 3s ease infinite;
-}
-.shape::before {
-  content: "";
-  width: 15vmax;
-  height: 15vmax;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border-right: 1vmax solid transparent;
-  border-top: 1vmax solid black;
-  border-left: 1vmax solid transparent;
-  border-top-left-radius: 20vmax;
-  border-top-right-radius: 20vmax;
-  margin: 0 auto;
-  animation: arrow-part 3s infinite;
-  animation-delay: 1.5s;
-}
-.shape::after {
-  content: "";
-  width: 30vmax;
-  height: 30vmax;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border-right: 1vmax solid transparent;
-  border-top: 1vmax solid black;
-  border-left: 1vmax solid transparent;
-  border-top-left-radius: 20vmax;
-  border-top-right-radius: 20vmax;
-  margin: 0 auto;
-  animation: arrow-part 3s infinite;
-}
-.card {
-  border-top-left-radius: 2vmax;
-  border-bottom-right-radius: 2vmax;
-  height: 80vh;
-  width: 80vw;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flexbox;
-}
-.extend_notification {
-  background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
-    0 0 / cover no-repeat;
-  background-size: 600%;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  top: 2em;
-  rotate: 16deg;
-  left: 25.5em;
-  position: absolute;
-  opacity: 90%;
-  animation: float 2s ease-in-out infinite;
-}
-.move_away {
-  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
-  rotate: -100deg;
-  top: -2.5vmax;
-  left: 35vmax;
-  opacity: 0%;
-}
-.scroll_section {
-  opacity: 0;
-}
-.visible_scroll {
-  transition: opacity 2s;
-  transition-delay: 1s;
-  opacity: 1;
-}
-.show_cards_a {
-  transition: all 2s;
-  transform: translateY(-100vh);
-  opacity: 0;
-}
-.show_cards_b {
-  transition: all 2s;
-  transform: translateY(200vh);
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
-@keyframes arrow {
-  0% {
-    transform: translate(-50%, -50%);
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-  20% {
-    transform: translate(-50%, 50%);
-    border-right: 1.5vmax solid transparent;
-    border-top: 1.5vmax solid black;
-    border-left: 1.5vmax solid transparent;
-  }
-  30% {
-    transform: translate(-50%, 20%);
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-  40% {
-    transform: translate(-50%, 50%);
-    border-right: 1.5vmax solid transparent;
-    border-top: 1.5vmax solid black;
-    border-left: 1.5vmax solid transparent;
-  }
-  100% {
-    transform: translate(-50%, -50%);
-    border-top: vmax solid black;
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-}
-@keyframes arrow-part {
-  0% {
-    width: 8vmax;
-    height: 8vmax;
-    border-right: 0vmax solid transparent;
-    border-top: 0vmax solid black;
-    border-left: 0vmax solid transparent;
-  }
-  15% {
-    width: 8vmax;
-    height: 8vmax;
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-  70% {
-    width: 5.25vmax;
-    height: 5.25vmax;
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-  90% {
-    width: 2vmax;
-    height: 2vmax;
-    border-right: 1vmax solid transparent;
-    border-top: 1vmax solid black;
-    border-left: 1vmax solid transparent;
-  }
-  100% {
-    width: 2vmax;
-    height: 2vmax;
-    border-right: 0vmax solid transparent;
-    border-top: 0vmax solid black;
-    border-left: 0vmax solid transparent;
-  }
-}
-@keyframes float {
-  0% {
-    transform: translateY(0vmax) rotate(16deg);
-  }
-  50% {
-    transform: translateY(-0.2vmax) rotate(20deg);
-  }
-  100% {
-    transform: translateY(0vmax) rotate(16deg);
-  }
-}
-</style>
 
 <script>
 import NameAnim from "../components/NameAnim.vue";
@@ -461,6 +272,9 @@ export default {
     };
   },
   created() {
+    console.log(this.saheight);
+    console.log(this.sawidth);
+
     this.unwatch = this.$watch("extend", (val) => {
       if (val) {
         const hover = document.getElementById("extend_notification_text");
@@ -479,18 +293,15 @@ export default {
     }, 2000);
 
     onwheel = (mouse) => {
-      console.log(mouse.deltaY);
-      if (
-        mouse.deltaY > 99 &&
-        this.scrollShown &&
-        this.wait - Date.now() <= 0
-      ) {
+      //console.log(mouse.deltaY);
+      if (mouse.deltaY > 99 && this.wait - Date.now() <= 0) {
         this.wait = Date.now() + 1000;
-        console.log("hello");
         switch (this.pageState) {
           case 0: {
-            this.card_menu();
-            this.pageState = 1;
+            if (this.scrollShown) {
+              this.card_menu();
+              this.pageState = 1;
+            }
             break;
           }
           case 1: {
@@ -506,9 +317,15 @@ export default {
           case 3: {
             this.slide(3);
             this.pageState = 4;
+            let element = document.getElementById("Opener");
+            element.style.transition = "all 0s";
+            element.style.opacity = 0;
+            element.classList.remove("show_cards_a");
+            element.classList.add("show_cards_b");
             break;
           }
           case 4: {
+            this.down_to_main();
             this.pageState = 0;
             break;
           }
@@ -516,7 +333,6 @@ export default {
       }
       if (mouse.deltaY < -99 && this.wait - Date.now() <= 0) {
         this.wait = Date.now() + 1000;
-        console.log("hello");
         switch (this.pageState) {
           case 1: {
             this.leave_card_menu();
@@ -531,6 +347,12 @@ export default {
           case 3: {
             this.slide(1);
             this.pageState = 2;
+            let element = document.getElementById("Opener");
+            element.style.transition = "all 0s";
+            element.style.opacity = 0;
+            element.classList.add("show_cards_a");
+            element.classList.remove("show_cards_b");
+            cards.style.removeProperty("opacity");
             break;
           }
           case 4: {
@@ -547,14 +369,27 @@ export default {
       let element = document.getElementById("Opener");
       element.classList.add("show_cards_a");
       element = document.getElementById("Cards");
+      element.classList.remove("show_cards_a");
       element.classList.remove("show_cards_b");
     },
 
     leave_card_menu() {
       let element = document.getElementById("Opener");
       element.classList.remove("show_cards_a");
-      element = document.getElementById("Cards");
-      element.classList.add("show_cards_b");
+      let cards = document.getElementById("Cards");
+      cards.style.removeProperty("transform");
+      cards.classList.add("show_cards_b");
+    },
+
+    down_to_main() {
+      let element = document.getElementById("Opener");
+      element.style.transition = "all 2s";
+
+      let cards = document.getElementById("Cards");
+      cards.style.removeProperty("transform");
+      element.style.removeProperty("opacity");
+      cards.classList.add("show_cards_a");
+      element.classList.remove("show_cards_b");
     },
 
     slide(n) {

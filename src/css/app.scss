@@ -64,3 +64,211 @@ h6 {
   margin-bottom: 0.5em;
   line-height: 1.2em;
 }
+
+@media (orientation: landscape) {
+  .cardText {
+    height: calc(80vh);
+    width: calc(80vw - 80vmin);
+  }
+}
+
+@media (orientation: portrait) {
+  .cardText {
+    height: calc(80vh - 80vmin);
+    width: calc(80vw);
+  }
+}
+
+#scrollText {
+  mask-image: linear-gradient(black 50%, transparent 55%);
+  mask-mode: alpha;
+}
+#rotatingText {
+  animation: rotation 15s infinite linear;
+}
+.shape {
+  content: "scroll";
+  position: absolute;
+  opacity: 40%;
+  left: 50vw;
+  top: 90vh;
+  width: 0vmax;
+  height: 0vmax;
+  transform: translate(-50%, -50%);
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-top-left-radius: 10vmax;
+  border-top-right-radius: 10vmax;
+  margin: 0 auto;
+  display: inline-block;
+  animation: arrow 3s ease infinite;
+}
+.shape::before {
+  content: "";
+  width: 15vmax;
+  height: 15vmax;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-top-left-radius: 20vmax;
+  border-top-right-radius: 20vmax;
+  margin: 0 auto;
+  animation: arrow-part 3s infinite;
+  animation-delay: 1.5s;
+}
+.shape::after {
+  content: "";
+  width: 30vmax;
+  height: 30vmax;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-right: 1vmax solid transparent;
+  border-top: 1vmax solid black;
+  border-left: 1vmax solid transparent;
+  border-top-left-radius: 20vmax;
+  border-top-right-radius: 20vmax;
+  margin: 0 auto;
+  animation: arrow-part 3s infinite;
+}
+.card {
+  border-top-left-radius: 2vmax;
+  border-bottom-right-radius: 2vmax;
+  height: 80vh;
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flexbox;
+}
+.extend_notification {
+  background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
+    0 0 / cover no-repeat;
+  background-size: 600%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  top: 2em;
+  rotate: 16deg;
+  left: 25.5em;
+  position: absolute;
+  opacity: 90%;
+  animation: float 2s ease-in-out infinite;
+}
+.move_away {
+  transition: rotate 2s ease, top 1.5s ease, left 1s ease, opacity 0.6s ease;
+  rotate: -100deg;
+  top: -2.5vmax;
+  left: 35vmax;
+  opacity: 0%;
+}
+.scroll_section {
+  opacity: 0;
+}
+.visible_scroll {
+  transition: opacity 2s;
+  transition-delay: 1s;
+  opacity: 1;
+}
+.show_cards_a {
+  transition: all 2s;
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+.show_cards_b {
+  transition: all 2s;
+  transform: translateY(200vh);
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translate(-50%, -50%);
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  20% {
+    transform: translate(-50%, 50%);
+    border-right: 1.5vmax solid transparent;
+    border-top: 1.5vmax solid black;
+    border-left: 1.5vmax solid transparent;
+  }
+  30% {
+    transform: translate(-50%, 20%);
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  40% {
+    transform: translate(-50%, 50%);
+    border-right: 1.5vmax solid transparent;
+    border-top: 1.5vmax solid black;
+    border-left: 1.5vmax solid transparent;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    border-top: vmax solid black;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+}
+@keyframes arrow-part {
+  0% {
+    width: 8vmax;
+    height: 8vmax;
+    border-right: 0vmax solid transparent;
+    border-top: 0vmax solid black;
+    border-left: 0vmax solid transparent;
+  }
+  15% {
+    width: 8vmax;
+    height: 8vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  70% {
+    width: 5.25vmax;
+    height: 5.25vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  90% {
+    width: 2vmax;
+    height: 2vmax;
+    border-right: 1vmax solid transparent;
+    border-top: 1vmax solid black;
+    border-left: 1vmax solid transparent;
+  }
+  100% {
+    width: 2vmax;
+    height: 2vmax;
+    border-right: 0vmax solid transparent;
+    border-top: 0vmax solid black;
+    border-left: 0vmax solid transparent;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0vmax) rotate(16deg);
+  }
+  50% {
+    transform: translateY(-0.2vmax) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0vmax) rotate(16deg);
+  }
+}
