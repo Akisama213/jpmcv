@@ -75,25 +75,24 @@
     <!--Information Cards-->
     <div
       id="Cards"
-      class="row no-wrap show_cards_b"
+      class="row no-wrap show_cards_b justify-between"
+      @mousedown="drag()"
       style="
-        overflow-x: hidden;
-        overflow-y: hidden;
-        bottom: 10vh;
         left: 10vw;
+        bottom: 10vh;
         position: absolute;
         transition: all 2s;
-        width: max-content;
+        width: 320vw;
       "
     >
-      <q-card id="card_1" class="column card q-mr-xl" flat>
+      <q-card id="card_1" class="column card card_blur" flat>
         <q-img
           loading="lazy"
           style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
         />
-        <q-scroll-area class="cardText">
+        <q-scroll-area id="scroll_area_1" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text>
               <h3>About</h3>
@@ -127,15 +126,14 @@
           </div>
         </q-scroll-area>
       </q-card>
-
-      <q-card id="card_2" class="column card q-mx-xl" flat>
+      <q-card id="card_2" class="column card card_blur" flat>
         <q-img
           loading="lazy"
           style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
         />
-        <q-scroll-area class="cardText">
+        <q-scroll-area id="scroll_area_2" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text
               ><h3>Professional Experience</h3>
@@ -178,59 +176,76 @@
           </div>
         </q-scroll-area>
       </q-card>
-      <q-card id="card_3" class="column card q-mx-xl" flat>
+      <q-card id="card_3" class="column card card_blur" flat>
         <q-img
           loading="lazy"
           style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
         />
-        <q-scroll-area class="cardText">
+        <q-scroll-area id="scroll_area_3" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text>
               <h3>Technical Skills</h3>
-              <h5>Programming Languages</h5>
+              <div class="column">
+                <div class="col">
+                  <h5>Programming Languages</h5>
 
-              + HTML ●●●●● <br />
-              + Python ●●●●● <br />
-              + JavaScript - .Net ●●●●● <br />
-              + C ●●●●○ <br />
-              + C++ ●●●●○ <br />
-              + CSS ●●●●○<br />
-              <h5>Frontend</h5>
+                  + HTML ●●●●● <br />
+                  + Python ●●●●● <br />
+                  + JavaScript - .Net ●●●●● <br />
+                  + C ●●●●○ <br />
+                  + C++ ●●●●○ <br />
+                  + CSS ●●●●○<br />
+                  <br />
+                </div>
+                <div class="col">
+                  <h5>Frontend</h5>
 
-              + Vue - Vuetify - Quasar ●●●●● <br />
-              + Wordpress - Elementor ●●●●● <br />
-              + React ●●●●○<br />
-              <h5>Databases</h5>
+                  + Vue - Vuetify - Quasar ●●●●● <br />
+                  + Wordpress - Elementor ●●●●● <br />
+                  + React ●●●●○<br />
+                  <br />
+                </div>
+                <div class="col">
+                  <h5>Databases</h5>
 
-              + SQL - MySQL ●●●●● <br />
-              + MongoDB ●●●●○ <br />
-              + Firebase ●●●●○ <br />
-              <h5>Engines</h5>
-              + Unity ●●●●○<br />
-              + Unreal Engine 5 ●●●●○ <br />
-              + Godot ●●○○○<br />
-              <h5>Tools</h5>
+                  + SQL - MySQL ●●●●● <br />
+                  + MongoDB ●●●●○ <br />
+                  + Firebase ●●●●○ <br />
+                  <br />
+                </div>
+                <div class="col">
+                  <h5>Engines</h5>
+                  + Unity ●●●●○<br />
+                  + Unreal Engine 5 ●●●●○ <br />
+                  + Godot ●●○○○<br />
+                  <br />
+                </div>
+                <div class="col">
+                  <h5>Tools</h5>
 
-              + Studio Code ●●●●● <br />
-              + GitHub ●●●●● <br />
-              + Office 365 & Figma ●●●●● <br />
-              + Postman ●●●●○<br />
-              + SSMS ●●●●○ <br />
-              + Docker ●●●●○<br />
+                  + Studio Code ●●●●● <br />
+                  + GitHub ●●●●● <br />
+                  + Office 365 & Figma ●●●●● <br />
+                  + Postman ●●●●○<br />
+                  + SSMS ●●●●○ <br />
+                  + Docker ●●●●○<br />
+                  <br />
+                </div>
+              </div>
             </text>
           </div>
         </q-scroll-area>
       </q-card>
-      <q-card id="card_4" class="column card q-ml-xl" flat>
+      <q-card id="card_4" class="column card card_blur" flat>
         <q-img
           loading="lazy"
           style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
         />
-        <q-scroll-area class="cardText">
+        <q-scroll-area id="scroll_area_4" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <h3>Personality Traits</h3>
             <h4>Soft Skills</h4>
@@ -256,7 +271,11 @@
     </div>
   </q-page>
 </template>
-
+<style>
+.Cards {
+  --mouseX: v-bind(mouseX);
+}
+</style>
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
@@ -267,14 +286,14 @@ export default {
     return {
       extend: false,
       scrollShown: false,
+      cardScroll: false,
+      draging: false,
       pageState: 0,
       wait: 0,
+      mouseX: 0,
     };
   },
   created() {
-    console.log(this.saheight);
-    console.log(this.sawidth);
-
     this.unwatch = this.$watch("extend", (val) => {
       if (val) {
         const hover = document.getElementById("extend_notification_text");
@@ -291,88 +310,56 @@ export default {
       scroll.classList.add("visible_scroll");
       this.scrollShown = true;
     }, 2000);
+    if(this.draging) {
+      onmousemove = (mouse) => {
+      this.mouseX = mouse.clientX;
+    };
+    }
 
     onwheel = (mouse) => {
-      //console.log(mouse.deltaY);
-      if (mouse.deltaY > 99 && this.wait - Date.now() <= 0) {
-        this.wait = Date.now() + 1000;
-        switch (this.pageState) {
-          case 0: {
-            if (this.scrollShown) {
-              this.card_menu();
-              this.pageState = 1;
-            }
-            break;
-          }
-          case 1: {
-            this.slide(1);
-            this.pageState = 2;
-            break;
-          }
-          case 2: {
-            this.slide(2);
-            this.pageState = 3;
-            break;
-          }
-          case 3: {
-            this.slide(3);
-            this.pageState = 4;
-            let element = document.getElementById("Opener");
-            element.style.transition = "all 0s";
-            element.style.opacity = 0;
-            element.classList.remove("show_cards_a");
-            element.classList.add("show_cards_b");
-            break;
-          }
-          case 4: {
-            this.down_to_main();
-            this.pageState = 0;
-            break;
-          }
-        }
+      if (mouse.deltaY > 99) {
+        this.page_state("+");
       }
-      if (mouse.deltaY < -99 && this.wait - Date.now() <= 0) {
-        this.wait = Date.now() + 1000;
-        switch (this.pageState) {
-          case 1: {
-            this.leave_card_menu();
-            this.pageState = 0;
-            break;
-          }
-          case 2: {
-            this.slide(0);
-            this.pageState = 1;
-            break;
-          }
-          case 3: {
-            this.slide(1);
-            this.pageState = 2;
-            let element = document.getElementById("Opener");
-            element.style.transition = "all 0s";
-            element.style.opacity = 0;
-            element.classList.add("show_cards_a");
-            element.classList.remove("show_cards_b");
-            cards.style.removeProperty("opacity");
-            break;
-          }
-          case 4: {
-            this.slide(2);
-            this.pageState = 3;
-            break;
-          }
-        }
+      if (mouse.deltaY < -99) {
+        this.page_state("-");
       }
     };
   },
   methods: {
+    page_state(n) {
+      if (this.wait - Date.now() <= 0) {
+        if (n == "+" && this.pageState < 4) {
+          this.wait = Date.now() + 1000;
+          if (this.pageState == 0) {
+            this.card_menu();
+          }
+          this.pageState += 1;
+          this.slide();
+          this.blur();
+          this.deblur();
+        }
+        if (n == "-" && this.pageState > 0) {
+          this.wait = Date.now() + 1000;
+          if (this.pageState == 1) {
+            this.pageState -= 1;
+            this.leave_card_menu();
+          } else {
+            this.pageState -= 1;
+            this.slide();
+            this.blur();
+            this.deblur();
+          }
+        }
+      }
+    },
+
     card_menu() {
       let element = document.getElementById("Opener");
       element.classList.add("show_cards_a");
-      element = document.getElementById("Cards");
-      element.classList.remove("show_cards_a");
-      element.classList.remove("show_cards_b");
+      let cards = document.getElementById("Cards");
+      cards.classList.remove("show_cards_a");
+      cards.classList.remove("show_cards_b");
     },
-
     leave_card_menu() {
       let element = document.getElementById("Opener");
       element.classList.remove("show_cards_a");
@@ -380,21 +367,34 @@ export default {
       cards.style.removeProperty("transform");
       cards.classList.add("show_cards_b");
     },
-
-    down_to_main() {
-      let element = document.getElementById("Opener");
-      element.style.transition = "all 2s";
-
+    slide() {
       let cards = document.getElementById("Cards");
-      cards.style.removeProperty("transform");
-      element.style.removeProperty("opacity");
-      cards.classList.add("show_cards_a");
-      element.classList.remove("show_cards_b");
+      cards.style.transform = "translateX(" + -25 * (this.pageState - 1) + "%)";
     },
-
-    slide(n) {
+    blur() {
+      if (this.pageState - 1 > 0) {
+        let card = document.getElementById("card_" + (this.pageState - 1));
+        card.classList.add("card_blur");
+        card.style.transformOrigin = "90% 60%";
+      }
+      if (this.pageState + 1 < 5) {
+        let card = document.getElementById("card_" + (this.pageState + 1));
+        card.classList.add("card_blur");
+        card.style.transformOrigin = "10% 60%";
+      }
+    },
+    deblur() {
+      let card = document.getElementById("card_" + this.pageState);
+      card.classList.remove("card_blur");
+      card.removeAttribute("transform");
+      card.removeAttribute("transform-origin");
+    },
+    drag() {
+      console.log(this.mouseX);
       let cards = document.getElementById("Cards");
-      cards.style.transform = "translateX(" + -25 * n + "%)";
+      cards.style.left = "calc(" + "10vw + calc(var(--mouseX) - " + this.mouseX + "))";
+      console.log("calc(" + "10vw + var(--mouseX) - " + this.mouseX + "px)");
+      console.log(cards);
     },
   },
   components: {

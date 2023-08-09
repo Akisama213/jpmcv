@@ -1,8 +1,7 @@
 //App global css in SCSS form
 body {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   background: linear-gradient(-45deg, #203f37, $primary, #3f2033);
   background-size: 400% 400%;
   height: 100%;
@@ -142,8 +141,14 @@ h6 {
   border-bottom-right-radius: 2vmax;
   height: 80vh;
   width: 80vw;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flexbox;
+  transition: all 1s ease;
+}
+.card_blur {
+  filter: blur(1px);
+  transform: scale(80%);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .extend_notification {
   background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
