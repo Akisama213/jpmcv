@@ -58,7 +58,7 @@
                     font-weight: 600;
                     letter-spacing: 1.7px;
                     font-size: 18;
-                    opacity: 50%;
+                    opacity: 60%;
                   "
                   alignment-baseline="top"
                   xlink:href="#circle"
@@ -73,22 +73,13 @@
     </div>
 
     <!--Information Cards-->
-    <div
-      id="Cards"
-      class="row no-wrap show_cards_b justify-between"
-      @mousedown="drag()"
-      style="
-        left: 10vw;
-        bottom: 10vh;
-        position: absolute;
-        transition: all 2s;
-        width: 320vw;
-      "
-    >
+
+    <div id="Cards" class="show_cards_b">
+      <div id="Cards_sub" class="cards row no-wrap  justify-between" @mousedown="dragging = true"">
       <q-card id="card_1" class="column card card_blur" flat>
         <q-img
           loading="lazy"
-          style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
+          style="ratio: 1; opacity: 60%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
         />
@@ -129,7 +120,7 @@
       <q-card id="card_2" class="column card card_blur" flat>
         <q-img
           loading="lazy"
-          style="ratio: 1; opacity: 30%; height: 80vmin; width: 80vmin"
+          style="ratio: 1; opacity: 60%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
         />
@@ -179,7 +170,7 @@
       <q-card id="card_3" class="column card card_blur" flat>
         <q-img
           loading="lazy"
-          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          style="ratio: 1; opacity: 60%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
         />
@@ -241,7 +232,7 @@
       <q-card id="card_4" class="column card card_blur" flat>
         <q-img
           loading="lazy"
-          style="ratio: 1; opacity: 40%; height: 80vmin; width: 80vmin"
+          style="ratio: 1; opacity: 60%; height: 80vmin; width: 80vmin"
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
         />
@@ -269,13 +260,9 @@
         </q-scroll-area>
       </q-card>
     </div>
+    </div>
   </q-page>
 </template>
-<style>
-.Cards {
-  --mouseX: v-bind(mouseX);
-}
-</style>
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
@@ -288,9 +275,10 @@ export default {
       scrollShown: false,
       cardScroll: false,
       draging: false,
+      cardsX: "0px",
+      curentX: 0,
       pageState: 0,
       wait: 0,
-      mouseX: 0,
     };
   },
   created() {
@@ -310,10 +298,14 @@ export default {
       scroll.classList.add("visible_scroll");
       this.scrollShown = true;
     }, 2000);
+
     if(this.draging) {
       onmousemove = (mouse) => {
-      this.mouseX = mouse.clientX;
-    };
+        this.cardsX = (this.currentX - mouse.clientX) + "px";
+      };
+      onmousemove = (mouse) => {
+        this.cardsX = (this.currentX - mouse.clientX) + "px";
+      };
     }
 
     onwheel = (mouse) => {
@@ -352,7 +344,6 @@ export default {
         }
       }
     },
-
     card_menu() {
       let element = document.getElementById("Opener");
       element.classList.add("show_cards_a");
@@ -388,13 +379,6 @@ export default {
       card.classList.remove("card_blur");
       card.removeAttribute("transform");
       card.removeAttribute("transform-origin");
-    },
-    drag() {
-      console.log(this.mouseX);
-      let cards = document.getElementById("Cards");
-      cards.style.left = "calc(" + "10vw + calc(var(--mouseX) - " + this.mouseX + "))";
-      console.log("calc(" + "10vw + var(--mouseX) - " + this.mouseX + "px)");
-      console.log(cards);
     },
   },
   components: {

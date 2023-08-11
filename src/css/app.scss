@@ -136,12 +136,19 @@ h6 {
   margin: 0 auto;
   animation: arrow-part 3s infinite;
 }
+.cards {
+  left: 10vw;
+  bottom: 10vh;
+  position: absolute;
+  transition: all 2s;
+  width: 320vw;
+}
 .card {
   border-top-left-radius: 2vmax;
   border-bottom-right-radius: 2vmax;
   height: 80vh;
   width: 80vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flexbox;
   transition: all 1s ease;
 }
