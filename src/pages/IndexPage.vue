@@ -31,7 +31,7 @@
       <div id="Scroll" class="scroll_section">
         <div class="shape">
           <div
-            @click="card_menu()"
+            @click="page_state('+')"
             id="scrollText"
             style="position: absolute; transform: translate(-50%, -50%)"
           >
@@ -71,7 +71,6 @@
         </div>
       </div>
     </div>
-
     <!--Information Cards-->
     <div id="Cards" class="cards show_cards_b" >
       <div id="Cards_sub" class="row no-wrap justify-between" @mousedown="drag($event)">
@@ -250,11 +249,26 @@
       @click="balls($event)"
       id="Card_balls_mark"
       style="
-        background-image: radial-gradient(rgba(255, 255, 255, 0.2) 45%, transparent 50%);
+        background-image: radial-gradient(rgba(255, 255, 255, 0.5) 45%, transparent 50%);
         background-repeat: no-repeat;
       "
       class="show_cards_b cardballs"
     />
+
+    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
+      <q-img src="/icons8-github.svg" style="height: 3.2vmax; width: 3.2vmax;"/>
+    </q-btn>
+    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
+      <q-img src="/icons8-gmail.svg" style="height: 2.5vmax; width: 2.5vmax;"/>
+    </q-btn>
+    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
+      <q-img src="/icons8-linkedin.svg" style="height: 3vmax; width: 3vmax;"/>
+    </q-btn>
+    <q-btn push round style="opacity: 1; position: absolute; right: 1em; bottom: 1em" size="3.5vmin" color="grey">
+      <q-img src="/JP.svg" style="height: 3vmax; width: 3vmax;"/>
+    </q-btn>
+
+
     </q-page>
 </template>
 <script>
@@ -428,7 +442,6 @@ export default {
       card.removeAttribute("transform-origin");
     },
     balls(event) {
-      console.log(event.layerX);
       if(event.layerX < -40) {
         this.page_state(1);
       } else if(event.layerX < 0) {
