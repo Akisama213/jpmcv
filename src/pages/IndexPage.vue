@@ -74,8 +74,8 @@
 
     <!--Information Cards-->
 
-    <div id="Cards" class="show_cards_b">
-      <div id="Cards_sub" class="cards row no-wrap  justify-between" @mousedown="dragging = true"">
+    <div id="Cards" class="cards show_cards_b" >
+      <div id="Cards_sub" class="row no-wrap justify-between" @mousedown="drag($event)">
       <q-card id="card_1" class="column card card_blur" flat>
         <q-img
           loading="lazy"
@@ -83,7 +83,7 @@
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
         />
-        <q-scroll-area id="scroll_area_1" class="cardText">
+        <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_1" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text>
               <h3>About</h3>
@@ -124,7 +124,7 @@
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
         />
-        <q-scroll-area id="scroll_area_2" class="cardText">
+        <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_2" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text
               ><h3>Professional Experience</h3>
@@ -174,54 +174,54 @@
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
         />
-        <q-scroll-area id="scroll_area_3" class="cardText">
+        <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_3" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <text>
               <h3>Technical Skills</h3>
-              <div class="column">
+              <div class="justify-between">
                 <div class="col">
                   <h5>Programming Languages</h5>
 
-                  + HTML ●●●●● <br />
-                  + Python ●●●●● <br />
-                  + JavaScript - .Net ●●●●● <br />
-                  + C ●●●●○ <br />
-                  + C++ ●●●●○ <br />
-                  + CSS ●●●●○<br />
+                  <b>+</b> HTML ●●●●● <br />
+                  <b>+</b> Python ●●●●● <br />
+                  <b>+</b> JavaScript - .Net ●●●●● <br />
+                  <b>+</b> C ●●●●○ <br />
+                  <b>+</b> C++ ●●●●○ <br />
+                  <b>+</b> CSS ●●●●○<br />
                   <br />
                 </div>
                 <div class="col">
                   <h5>Frontend</h5>
 
-                  + Vue - Vuetify - Quasar ●●●●● <br />
-                  + Wordpress - Elementor ●●●●● <br />
-                  + React ●●●●○<br />
+                  <b>+</b> Vue - Vuetify - Quasar ●●●●● <br />
+                  <b>+</b> Wordpress - Elementor ●●●●● <br />
+                  <b>+</b> React ●●●●○<br />
                   <br />
                 </div>
                 <div class="col">
                   <h5>Databases</h5>
 
-                  + SQL - MySQL ●●●●● <br />
-                  + MongoDB ●●●●○ <br />
-                  + Firebase ●●●●○ <br />
+                  <b>+</b> SQL - MySQL ●●●●● <br />
+                  <b>+</b> MongoDB ●●●●○ <br />
+                  <b>+</b> Firebase ●●●●○ <br />
                   <br />
                 </div>
                 <div class="col">
                   <h5>Engines</h5>
-                  + Unity ●●●●○<br />
-                  + Unreal Engine 5 ●●●●○ <br />
-                  + Godot ●●○○○<br />
+                  <b>+</b> Unity ●●●●○<br />
+                  <b>+</b> Unreal Engine 5 ●●●●○ <br />
+                  <b>+</b> Godot ●●○○○<br />
                   <br />
                 </div>
                 <div class="col">
                   <h5>Tools</h5>
 
-                  + Studio Code ●●●●● <br />
-                  + GitHub ●●●●● <br />
-                  + Office 365 & Figma ●●●●● <br />
-                  + Postman ●●●●○<br />
-                  + SSMS ●●●●○ <br />
-                  + Docker ●●●●○<br />
+                  <b>+</b> Studio Code ●●●●● <br />
+                  <b>+</b> GitHub ●●●●● <br />
+                  <b>+</b> Office 365 & Figma ●●●●● <br />
+                  <b>+</b> Postman ●●●●○<br />
+                  <b>+</b> SSMS ●●●●○ <br />
+                  <b>+</b> Docker ●●●●○<br />
                   <br />
                 </div>
               </div>
@@ -236,26 +236,26 @@
           spinner-color="rgba(1, 1, 1, 0.5)"
           src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
         />
-        <q-scroll-area id="scroll_area_4" class="cardText">
+        <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_4" class="cardText">
           <div style="padding-left: 2%; padding-right: 2%">
             <h3>Personality Traits</h3>
             <h4>Soft Skills</h4>
-            + Teamwork <br />
-            + Active listening <br />
-            + Confidence <br />
-            + Creativity <br />
-            + Patience <br />
-            + Attention to detail <br />
-            + Assertive communication <br />
-            + Adaptability<br />
-            + Proactivity<br />
+            <b>+</b> Teamwork <br />
+            <b>+</b> Active listening <br />
+            <b>+</b> Confidence <br />
+            <b>+</b> Creativity <br />
+            <b>+</b> Patience <br />
+            <b>+</b> Attention to detail <br />
+            <b>+</b> Assertive communication <br />
+            <b>+</b> Adaptability<br />
+            <b>+</b> Proactivity<br />
             <h4>Hobbies</h4>
-            + Exercise <br />
-            + Art <br />
-            + Gaming <br />
-            + Music <br />
-            + Series <br />
-            + Hangouts<br />
+            <b>+</b> Exercise <br />
+            <b>+</b> Art <br />
+            <b>+</b> Gaming <br />
+            <b>+</b> Music <br />
+            <b>+</b> Series <br />
+            <b>+</b> Hangouts<br />
           </div>
         </q-scroll-area>
       </q-card>
@@ -263,6 +263,9 @@
     </div>
   </q-page>
 </template>
+<style>
+
+</style>
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
@@ -274,14 +277,22 @@ export default {
       extend: false,
       scrollShown: false,
       cardScroll: false,
-      draging: false,
-      cardsX: "0px",
+      dragging: false,
+      stopscroll: false,
       curentX: 0,
+      firstX: 0,
       pageState: 0,
       wait: 0,
     };
   },
+  watch: {
+    currentX(val) {
+
+    }
+  },
   created() {
+    //let cards = document.getElementById("Cards_sub");
+
     this.unwatch = this.$watch("extend", (val) => {
       if (val) {
         const hover = document.getElementById("extend_notification_text");
@@ -299,21 +310,18 @@ export default {
       this.scrollShown = true;
     }, 2000);
 
-    if(this.draging) {
-      onmousemove = (mouse) => {
-        this.cardsX = (this.currentX - mouse.clientX) + "px";
-      };
-      onmousemove = (mouse) => {
-        this.cardsX = (this.currentX - mouse.clientX) + "px";
-      };
+    onmousemove = (mouse) => {
+      this.currentX = mouse.clientX;
     }
 
     onwheel = (mouse) => {
-      if (mouse.deltaY > 99) {
-        this.page_state("+");
-      }
-      if (mouse.deltaY < -99) {
-        this.page_state("-");
+      if(!this.stopscroll){
+        if (mouse.deltaY > 99) {
+          this.page_state("+");
+        }
+        if (mouse.deltaY < -99) {
+          this.page_state("-");
+        }
       }
     };
   },
@@ -380,6 +388,13 @@ export default {
       card.removeAttribute("transform");
       card.removeAttribute("transform-origin");
     },
+    drag(event) {
+      this.firstX = event.clientX;
+      this.dragging = true;
+    },
+    scrollingCard(event) {
+      this.stopscroll = Date.now() + 2000;
+    }
   },
   components: {
     NameAnim,
