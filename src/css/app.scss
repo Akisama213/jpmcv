@@ -1,6 +1,5 @@
 //App global css in SCSS form
 body {
-  position: relative;
   overflow: hidden;
   background: linear-gradient(-45deg, #203f37, $primary, #3f2033);
   background-size: 400% 400%;
@@ -9,7 +8,6 @@ body {
   font-family: "Century Gothic";
   font-size: 1vmax;
   line-height: 1.2em;
-  margin: 0.5em 0;
   color: $secondary;
   animation: gradient 15s infinite;
 }
@@ -24,7 +22,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
 h1 {
   font-size: 6em;
   margin-bottom: 0.5em;
@@ -70,14 +67,12 @@ h6 {
     width: calc(80vw - 80vmin);
   }
 }
-
 @media (orientation: portrait) {
   .cardText {
     height: calc(80vh - 80vmin);
     width: calc(80vw);
   }
 }
-
 #scrollText {
   mask-image: linear-gradient(black 50%, transparent 55%);
   mask-mode: alpha;
@@ -136,9 +131,25 @@ h6 {
   margin: 0 auto;
   animation: arrow-part 3s infinite;
 }
+.cardballs {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4) 45%, transparent 50%);
+  background-position: 0 0;
+  background-size: 25% 100%;
+  width: 16vh;
+  height: 4vh;
+  transform: translate(-50%, -50%);
+  bottom: 4vh;
+  left: 50%;
+  bottom: 3%;
+  position: absolute;
+  transition: all 2.1s ease;
+
+  mask-image: radial-gradient(50% 85%, white 85%, transparent 100%);
+  mask-repeat: no-repeat;
+}
 .cards {
   left: 10vw;
-  bottom: 10vh;
+  bottom: 14vh;
   position: absolute;
   transition: all 2s;
   width: 320vw;
@@ -155,7 +166,7 @@ h6 {
 .card_blur {
   filter: blur(1px);
   transform: scale(80%);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .extend_notification {
   background: url(https://lh3.googleusercontent.com/pw/AIL4fc8ySvDJoYzhwzrfxuzUNiG_UTGM7toIvoAcBIVmHlXHI0L4fz3A0qobWHAFCOITwU9WwJKsz8puFsRUG82TZ3wBEO7UXxSWSRgFy4CAyL1r0S-vzrRz=w2400)
@@ -187,13 +198,13 @@ h6 {
   opacity: 1;
 }
 .show_cards_a {
-  transition: all 2s;
-  transform: translateY(-100vh);
+  transition: all 2.5s;
+  transform: translateY(-200vh);
   opacity: 0;
 }
 .show_cards_b {
-  transition: all 2s;
-  transform: translateY(200vh);
+  transition: all 2.5s;
+  transform: translateY(300vh);
 }
 @keyframes rotation {
   0% {
