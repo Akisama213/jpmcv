@@ -83,7 +83,7 @@ h6 {
 .shape {
   content: "scroll";
   position: absolute;
-  opacity: 40%;
+  opacity: 50%;
   left: 50vw;
   top: 90vh;
   width: 0vmax;
@@ -143,8 +143,7 @@ h6 {
   bottom: 3%;
   position: absolute;
   transition: all 2.1s ease, background-position 0.6s;
-
-  mask-image: radial-gradient(50% 85%, white 85%, transparent 100%);
+  mask-image: radial-gradient(50% 85% at 50% 50%, white 87%, transparent 100%);
   mask-repeat: no-repeat;
 }
 .cards {
@@ -153,6 +152,7 @@ h6 {
   position: absolute;
   transition: all 2s;
   width: 320vw;
+  display: block;
 }
 .card {
   border-top-left-radius: 2vmax;

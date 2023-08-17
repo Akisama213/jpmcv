@@ -72,8 +72,8 @@
       </div>
     </div>
     <!--Information Cards-->
-    <div id="Cards" class="cards show_cards_b" >
-      <div id="Cards_sub" class="row no-wrap justify-between" @mousedown="drag($event)">
+    <div id="Cards" class="cards show_cards_b">
+      <div id="Cards_sub" data-dragstart="0" moveX="0" class="row no-wrap justify-between" >
         <q-card @click="page_state(1)" id="card_1" class="column card card_blur" flat>
           <q-img
             loading="lazy"
@@ -81,7 +81,7 @@
             spinner-color="rgba(1, 1, 1, 0.5)"
             src="https://lh3.googleusercontent.com/pw/AIL4fc8Nb2Bhg-eiIk4ZmweNPjSdaGAomwVS5WPgeS4JR1ZhfJZISRVTo_IiOxJkcaeC3MweE6JUz8iu9EqGixI8tSEOQfbinW310ScTXg3zcRhLovPjIsY0=w2400"
           />
-          <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_1" class="cardText">
+          <q-scroll-area @scroll="stopscroll = Date.now() + 300" id="scroll_area_1" class="cardText">
             <div style="padding-left: 2%; padding-right: 2%">
               <text>
                 <h3>About</h3>
@@ -122,7 +122,7 @@
             spinner-color="rgba(1, 1, 1, 0.5)"
             src="https://lh3.googleusercontent.com/pw/AIL4fc-RUC6_8H2n1pdL_G14lnqRmTY7jpPCjnwZUUCwBhEwhKzE6SKOUD2ToPC9i-xVmYtZt-NAalHK_OaryXzPy6xR6fY-F8MjFfIT5CZ9Bacm3_39Fbqv=w2400"
           />
-          <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_2" class="cardText">
+          <q-scroll-area @scroll="stopscroll = Date.now() + 300" id="scroll_area_2" class="cardText">
             <div style="padding-left: 2%; padding-right: 2%">
               <text
                 ><h3>Professional Experience</h3>
@@ -172,7 +172,7 @@
             spinner-color="rgba(1, 1, 1, 0.5)"
             src="https://lh3.googleusercontent.com/pw/AIL4fc-L2Ws535Y1Ejwkjxjrh7sZ_5Wef3y4dI5DhHuMkZOebNgAHujn3UCHUUqsJckSH36LzyRfikkSb1mJMS7q8jq4UXsQgfu4MrZh6N8F3cFPnNzuT17J=w2400"
           />
-          <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_3" class="cardText">
+          <q-scroll-area @scroll="stopscroll = Date.now() + 300" id="scroll_area_3" class="cardText">
             <div style="padding-left: 2%; padding-right: 2%">
               <text>
                 <h3>Technical Skills</h3>
@@ -218,7 +218,7 @@
             spinner-color="rgba(1, 1, 1, 0.5)"
             src="https://lh3.googleusercontent.com/pw/AIL4fc_ezoU5_WugYaOamdGG4iCfR66wmoK-EDrNJyytxytf88Al8BrWVcLSsqdBuOOJSDPMEA_G_eIDw_EO3Jj-uC5x4XFYd6G18JoGtkwWS1IAox4zMNoY=w2400"
           />
-          <q-scroll-area @mouseover="stopscroll = true" @mouseleave="stopscroll = false" id="scroll_area_4" class="cardText">
+          <q-scroll-area @scroll="stopscroll = Date.now() + 300" id="scroll_area_4" class="cardText">
             <div style="padding-left: 2%; padding-right: 2%">
               <h3>Personality Traits</h3>
               <h4>Soft Skills</h4>
@@ -244,6 +244,7 @@
         </q-card>
       </div>
     </div>
+
     <div id="Card_balls" class="show_cards_b cardballs" />
     <div
       @click="balls($event)"
@@ -255,26 +256,26 @@
       class="show_cards_b cardballs"
     />
 
-    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
-      <q-img src="/icons8-github.svg" style="height: 3.2vmax; width: 3.2vmax;"/>
-    </q-btn>
-    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
-      <q-img src="/icons8-gmail.svg" style="height: 2.5vmax; width: 2.5vmax;"/>
-    </q-btn>
-    <q-btn push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em" size="3vmin" color="grey">
-      <q-img src="/icons8-linkedin.svg" style="height: 3vmax; width: 3vmax;"/>
-    </q-btn>
-    <q-btn push round style="opacity: 1; position: absolute; right: 1em; bottom: 1em" size="3.5vmin" color="grey">
-      <q-img src="/JP.svg" style="height: 3vmax; width: 3vmax;"/>
-    </q-btn>
-
-
+    <div id="JP" class="show_cards_b" style="position: absolute; right: 1em; bottom: 1em; transition: all 3s ease-in-out">
+      <q-btn @mouseover="JPwait = Date.now() + 1500" id="mini_button3" push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em; transition: all 0.5s ease; background-color: rgb(132, 74, 158)" size="3vmin" href="https://github.com/Akisama213/jpmcv" target="_blank">
+        <q-img src="/icons8-github.svg" style="height: 6.2vmin; width: 6.2vmin;"/>
+      </q-btn>
+      <q-btn @mouseover="JPwait = Date.now() + 1500" id="mini_button2" push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em; transition: all 0.5s ease; background-color: rgb(172, 77, 77)" size="3vmin" href="https://mail.google.com/mail/?view=cm&source=mailto&to=jason1234pm@gmail.com" target="_blank">
+        <q-img src="/icons8-gmail.svg" style="height: 5.5vmin; width: 5.5vmin;"/>
+      </q-btn>
+      <q-btn @mouseover="JPwait = Date.now() + 1500" id="mini_button1" push round style="opacity: 1; position: absolute; right: 1.5em; bottom: 1.3em; transition: all 0.5s ease; background-color: rgb(82, 123, 189)" size="3vmin" href="https://www.linkedin.com/in/jpm213/" target="_blank">
+        <q-img src="/icons8-linkedin.svg" style="height: 6vmin; width: 6vmin;"/>
+      </q-btn>
+      <q-btn @mouseover="JPwait = Date.now() + 1500" push round style="opacity: 1; position: absolute; right: 1em; bottom: 1em; transition: all 1.6s ease; background-color: rgba(180, 180, 180, 1)" size="3.5vmin">
+        <q-img id="JP_logo" src="/JP.svg" style="transition: all 0.6s;height: 6vmin; width: 6vmin;" @click="extendJP()"/>
+      </q-btn>
+    </div>
     </q-page>
 </template>
 <script>
 import NameAnim from "../components/NameAnim.vue";
 import StaryBg from "../components/StaryBg.vue";
-//mask-image: linear-gradient(to right, transparent 0%, black 10%, black 20%, transparent 30%);
+const scroll = document.getElementById("Scroll");
 export default {
   name: "IndexPage",
   data() {
@@ -282,18 +283,11 @@ export default {
       extend: false,
       scrollShown: false,
       cardScroll: false,
-      dragging: false,
       stopscroll: false,
-      curentX: 0,
-      firstX: 0,
+      JPwait: 0,
       pageState: 0,
       wait: 0,
     };
-  },
-  watch: {
-    currentX(val) {
-
-    },
   },
   created() {
     this.unwatch = this.$watch("extend", (val) => {
@@ -308,25 +302,55 @@ export default {
     });
 
     setTimeout(() => {
-      const scroll = document.getElementById("Scroll");
       scroll.classList.add("visible_scroll");
       this.scrollShown = true;
     }, 2000);
 
-    onmousemove = (mouse) => {
-      this.currentX = mouse.clientX;
+    onmousedown = (mouse) => {
+      if(this.pageState != 0) {
+        let cards_sub = document.getElementById("Cards_sub");
+        cards_sub.dataset.dragstart = mouse.clientX;
+      }
     }
 
-    onwheel = (mouse) => {
-      if(!this.stopscroll){
-        if (mouse.deltaY > 99) {
-          this.page_state("+");
-        }
-        if (mouse.deltaY < -99) {
-          this.page_state("-");
-        }
+    onmouseup = ()  => {
+      let cards_sub = document.getElementById("Cards_sub");
+      cards_sub.dataset.dragstart = "0";
+      cards_sub.animate({transform: "translateX(0%)"}, {duration: 1200, fill:"forwards", effect:"ease-out"})
+      if(cards_sub.dataset.moveX < -15) {
+        this.page_state("+");
+      } else if(cards_sub.dataset.moveX > 15) {
+        this.page_state("-");
       }
     };
+
+    onmousemove = (mouse) => {
+      setTimeout(() =>{
+        if(this.JPwait - Date.now() <= 0) {
+          this.dextendJP();
+        }
+      }, 100);
+      let cards_sub = document.getElementById("Cards_sub");
+      if(cards_sub.dataset.dragstart != 0) {
+        const moveX = -50 * Math.min((cards_sub.dataset.dragstart - mouse.clientX) / window.innerWidth);
+        cards_sub.dataset.moveX = moveX;
+        cards_sub.animate({transform: "translateX(" + moveX + "%)"}, {duration: 1500, fill:"forwards"})
+      }
+    };
+
+    onwheel = (mouse) => {
+      setTimeout(() =>{
+        if(this.stopscroll - Date.now() <= 0){
+          if (mouse.deltaY > 99) {
+            this.page_state("+");
+          }
+          if (mouse.deltaY < -99) {
+            this.page_state("-");
+          }
+        }
+      }, 50);
+    };
+
   },
   methods: {
     page_state(n) {
@@ -401,6 +425,8 @@ export default {
       let cardsBallsM = document.getElementById("Card_balls_mark");
       cardsBalls.classList.remove("show_cards_b");
       cardsBallsM.classList.remove("show_cards_b");
+      let JP = document.getElementById("JP");
+      JP.classList.remove("show_cards_b");
     },
     leave_card_menu() {
       let element = document.getElementById("Opener");
@@ -452,9 +478,28 @@ export default {
         this.page_state(4);
       }
     },
-    drag(event) {
-      this.firstX = event.clientX;
-      this.dragging = true;
+    extendJP() {
+      let direction;
+      this.JPwait = Date.now() + 1500;
+      let logo = document.getElementById("JP_logo");
+      logo.style.transform = "rotate(180deg)";
+      if(window.innerWidth > window.innerHeight)  {
+        direction = "X";
+      } else {
+        direction = "Y";
+      }
+      for(let n = 1; n<4; n++) {
+        let button = document.getElementById("mini_button" + n);
+        button.style.transform = "translate" + direction + "(" + (-130*n) +"%)";
+      }
+    },
+    dextendJP() {
+      let logo = document.getElementById("JP_logo");
+      logo.style.removeProperty("transform");
+      for(let n = 1; n<4; n++) {
+        let button = document.getElementById("mini_button" + n);
+        button.style.removeProperty("transform");
+      }
     },
   },
   components: {
