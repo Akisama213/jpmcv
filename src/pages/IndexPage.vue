@@ -72,7 +72,7 @@
       </div>
     </div>
     <!--Information Cards-->
-    <div id="Cards" class="cards show_cards_b">
+    <div id="Cards" class="cards show_cards_b" >
       <div id="Cards_sub" data-dragstart="0" moveX="0" class="row no-wrap justify-between" >
         <q-card @click="page_state(1)" id="card_1" class="column card card_blur" flat>
           <q-img
@@ -133,7 +133,7 @@
                 <br />
                 <sub
                   >JavaScript, C++, CSS, HTML, .NET, React, MySQL , SSMS,
-                  ServiceNow, GitHub, GitLab, Docker, Postman, Jira</sub
+                  ServiceNow, GitHub, GitLab, Docker, Postman, Jira and others.</sub
                 >
                 <br />
                 <b>Accomplishments</b>
@@ -150,8 +150,8 @@
                 <br />
                 March 2023 - July 2023<br />
                 <b>Technologies</b> <br /><sub
-                  >Windows, Virtual Box, Linux, Python, Odoo, Postgres, MySQL,
-                  Postgres, HTML, CSS, WordPress, Elementor<br
+                  >Virtual Box, Linux, Python, Odoo, Postgres, MySQL,
+                  Postgres, HTML, CSS, WordPress, Elementor and others.<br
                 /></sub>
                 <b>Accomplishments</b><br />
                 <b>+</b> Designed the landing page needed for marketing and
@@ -307,22 +307,31 @@ export default {
     }, 2000);
 
     onmousedown = (mouse) => {
+      setTimeout(() =>{
+        if(this.JPwait - Date.now() <= 0) {
+          this.dextendJP();
+        }
+      }, 100);/*
       if(this.pageState != 0) {
         let cards_sub = document.getElementById("Cards_sub");
         cards_sub.dataset.dragstart = mouse.clientX;
-      }
+      }*/
     }
 
-    onmouseup = ()  => {
+    /*onmouseup = ()  => {
       let cards_sub = document.getElementById("Cards_sub");
       cards_sub.dataset.dragstart = "0";
-      cards_sub.animate({transform: "translateX(0%)"}, {duration: 1200, fill:"forwards", effect:"ease-out"})
-      if(cards_sub.dataset.moveX < -15) {
+      if(cards_sub.dataset.moveX < -6 && this.pageState < 4) {
         this.page_state("+");
-      } else if(cards_sub.dataset.moveX > 15) {
+        cards_sub.animate({transform: "translateX(0%)"}, {duration: 2500, fill:"forwards"})
+      } else if(cards_sub.dataset.moveX > 6) {
         this.page_state("-");
+        cards_sub.animate({transform: "translateX(0%)"}, {duration: 2500, fill:"forwards"})
+      } else {
+        cards_sub.animate({transform: "translateX(0%)"}, {duration: 1600, fill:"forwards"})
+
       }
-    };
+    };*/
 
     onmousemove = (mouse) => {
       setTimeout(() =>{
@@ -330,12 +339,12 @@ export default {
           this.dextendJP();
         }
       }, 100);
-      let cards_sub = document.getElementById("Cards_sub");
+      /*let cards_sub = document.getElementById("Cards_sub");
       if(cards_sub.dataset.dragstart != 0) {
-        const moveX = -50 * Math.min((cards_sub.dataset.dragstart - mouse.clientX) / window.innerWidth);
+        const moveX = -20 * Math.min((cards_sub.dataset.dragstart - mouse.clientX) / window.innerWidth);
         cards_sub.dataset.moveX = moveX;
-        cards_sub.animate({transform: "translateX(" + moveX + "%)"}, {duration: 1500, fill:"forwards"})
-      }
+        cards_sub.animate({transform: "translateX(" + moveX + "%)"}, {duration: 500, fill:"forwards"})
+      }*/
     };
 
     onwheel = (mouse) => {
