@@ -146,7 +146,7 @@
                 <b>+</b> Attended daily meetings utilizing Agile method “Scrum”
                 through Jira to administrate challenging deadlines.<br />
                 <br />
-                <h5>Frontend Developer - Ópticas Jimenez</h5>
+                <h5>Frontend Developer - Novoa Group</h5>
                 <br />
                 March 2023 - July 2023<br />
                 <b>Technologies</b> <br /><sub

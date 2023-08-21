@@ -10,6 +10,7 @@ body {
   line-height: 1.2em;
   color: $secondary;
   animation: gradient 15s infinite;
+  pointer-events: visible;
 }
 @keyframes gradient {
   0% {
